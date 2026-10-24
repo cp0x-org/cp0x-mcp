@@ -15,12 +15,12 @@ A read-only MCP server over cp0x public data, owned by [cp0x](https://cp0x.com).
 | `list_restricted_interfaces` | Interfaces with national, close-only, regional, or observed restrictions, including `scope`, `declared_layers`, `close_only_layers`, `regions`, and `observed_block`. | Required `country`: ISO 3166 alpha-2 code. |
 | `list_x402_facilitators` | The public facilitator catalog, including names and URLs. | None. |
 | `list_cp0x_x402_resources` | cp0x resource catalog entries, including prices, tags, and target URLs. | Optional `tag`: case-insensitive tag match. |
-| `about_cp0x` | The shipped cp0x fact sheet: mission, values, activities, sites, channels, grant, and 2025 figures. | None. |
+| `about_cp0x` | Leads with `distributed_to_users`: the total passed to users at today's token prices, every distribution with token amounts or cash prizes, and the value at distribution. Includes the shipped cp0x fact sheet: mission, values, activities, sites, channels, grant, and 2025 figures. | None. |
 | `list_cp0x_open_source` | Public cp0x repositories with descriptions, URLs, homepages, kinds, stars, topics, push dates, fork flags, and a count, sorted by latest push. Archived and private repositories and forks outside `pi-` interfaces are excluded. | Optional `kind`: `interface` or `project`, both when omitted. |
 
 Results include source attribution and a `stale` flag; failures can include an `error` field. Referral codes are returned as published, without inventing missing codes.
 
-Freshness and retry fields for upstream data (`about_cp0x` always returns `stale: false` and omits upstream timing fields):
+Freshness and retry fields for upstream data (`about_cp0x` keeps these fields inside `distributed_to_users.prices`; its top-level `stale` remains false). Missing token prices produce a partial total and are named in the summary; if no token has a price, the summary uses the value at distribution. Price errors remain inside `distributed_to_users.prices`:
 
 - `stale`: true when expired cached data is returned because a refresh failed or requests are paused.
 - `fetched_at`: UTC timestamp of the oldest upstream response used, or null when none is available.
@@ -72,6 +72,7 @@ Add a remote MCP server by URL using `https://mcp.cp0x.com/mcp`; select authenti
 | DeFi interface restrictions monitor | [Interface catalog](https://raw.githubusercontent.com/cp0x-org/pi-restricted-interfaces/main/monitor/current/catalog/interfaces.json) and [observations](https://raw.githubusercontent.com/cp0x-org/pi-restricted-interfaces/main/monitor/current/catalog/observations.json) from the public [monitor repository](https://github.com/cp0x-org/pi-restricted-interfaces). | 600 seconds. |
 | cp0x x402 catalogs | [Facilitators](https://x402-api.cp0x.com/api/free/facilitators) and [cp0x resources](https://x402-api.cp0x.com/api/free/cp0x-resources). | 300 seconds. |
 | cp0x open-source repositories | [api.github.com public repository API](https://api.github.com/orgs/cp0x-org/repos?per_page=100&type=public&sort=pushed) for [cp0x-org](https://github.com/cp0x-org); no API key required. | 10 minutes (600 seconds). |
+| Token prices | [CoinGecko public endpoint](https://api.coingecko.com/api/v3/simple/price?ids=hyperliquid,lighter,derive,resolv,paradex&vs_currencies=usd&include_last_updated_at=true) for HYPE, LIT, DRV, RESOLV, and DIME prices in USD in one request; no API key required. Used by `distributed_to_users`. | 60 seconds. |
 | cp0x static fact sheet | `cp0x_mcp/data/about.json`, shipped with the server; figures from the [cp0x 2025 annual report](https://cp0x.com/docs/reports/2025). | Loaded once into memory; no network request or timed refresh. |
 
 Monitor data is a published repository snapshot, not a live probe. Its version comes from the catalog's `meta.generated` field and is returned as `data_version` by `check_interface_restrictions`. Observations describe the recorded checks; missing probes do not establish availability.

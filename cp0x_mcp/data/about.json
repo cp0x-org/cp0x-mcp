@@ -9,27 +9,78 @@
   ],
   "what_we_do": "Supporting project launches, managing vaults, curating risk, validating networks, participating in protocol governance, running trading competitions and educational initiatives, and building open, permissionless frontends for DeFi protocols.",
   "sites": [
-    {"name": "cp0x.com", "url": "https://cp0x.com", "what": "Referral deals with partner exchanges, trading races and leaderboards, docs and the annual report"},
-    {"name": "Permissionless interfaces", "url": "https://pi.cp0x.com", "what": "Open-source frontends for DeFi protocols run by cp0x: no data collection, no geographic restrictions, Tor-compatible"},
-    {"name": "Restricted interfaces monitor", "url": "https://restricted.cp0x.com", "what": "Which official DeFi interfaces restrict which countries, declared by the protocol and observed by probes"},
-    {"name": "x402 ecosystem", "url": "https://x402.cp0x.com", "what": "Facilitators, resources and reports for x402 machine payments"},
-    {"name": "DeFi DNA", "url": "https://defidna.io", "what": "Neutral, open-source aggregator of DeFi risk intelligence: what each risk feed publishes, side by side, with no score of its own", "repo": "https://github.com/cp0x-org/defi-dna"},
-    {"name": "RWA Explorer", "url": "https://rwa.cp0x.com", "what": "Explore tokenized assets, compare issuers, and discover DeFi yield opportunities", "repo": "https://github.com/cp0x-org/rwa-explorer-dashboard"},
-    {"name": "Annual report 2025", "url": "https://cp0x.com/docs/reports/2025", "what": "Full-year figures and activities for 2025"},
-    {"name": "GitHub", "url": "https://github.com/cp0x-org", "what": "Open-source interfaces and tools; see the list_cp0x_open_source tool for the live list"}
+    {
+      "name": "cp0x.com",
+      "url": "https://cp0x.com",
+      "what": "Referral deals with partner exchanges, trading races and leaderboards, docs and the annual report"
+    },
+    {
+      "name": "Permissionless interfaces",
+      "url": "https://pi.cp0x.com",
+      "what": "Open-source frontends for DeFi protocols run by cp0x: no data collection, no geographic restrictions, Tor-compatible"
+    },
+    {
+      "name": "Restricted interfaces monitor",
+      "url": "https://restricted.cp0x.com",
+      "what": "Which official DeFi interfaces restrict which countries, declared by the protocol and observed by probes"
+    },
+    {
+      "name": "x402 ecosystem",
+      "url": "https://x402.cp0x.com",
+      "what": "Facilitators, resources and reports for x402 machine payments"
+    },
+    {
+      "name": "DeFi DNA",
+      "url": "https://defidna.io",
+      "what": "Neutral, open-source aggregator of DeFi risk intelligence: what each risk feed publishes, side by side, with no score of its own",
+      "repo": "https://github.com/cp0x-org/defi-dna"
+    },
+    {
+      "name": "RWA Explorer",
+      "url": "https://rwa.cp0x.com",
+      "what": "Explore tokenized assets, compare issuers, and discover DeFi yield opportunities",
+      "repo": "https://github.com/cp0x-org/rwa-explorer-dashboard"
+    },
+    {
+      "name": "Annual report 2025",
+      "url": "https://cp0x.com/docs/reports/2025",
+      "what": "Full-year figures and activities for 2025"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/cp0x-org",
+      "what": "Open-source interfaces and tools; see the list_cp0x_open_source tool for the live list"
+    }
   ],
   "channels": [
-    {"name": "X", "url": "https://x.com/cp0xdotcom", "handle": "@cp0xdotcom"},
-    {"name": "Telegram channel", "url": "https://t.me/cp0xdotcom"},
-    {"name": "Telegram community chat", "url": "https://t.me/+RcZMsrK_iiBlZTMy"},
-    {"name": "YouTube", "url": "https://www.youtube.com/channel/UCQLQXw0RaUrd4oM7GQFUJgg", "what": "cp0x podcast and recordings"},
-    {"name": "Email", "url": "mailto:admin@cp0x.com"}
+    {
+      "name": "X",
+      "url": "https://x.com/cp0xdotcom",
+      "handle": "@cp0xdotcom"
+    },
+    {
+      "name": "Telegram channel",
+      "url": "https://t.me/cp0xdotcom"
+    },
+    {
+      "name": "Telegram community chat",
+      "url": "https://t.me/+RcZMsrK_iiBlZTMy"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/channel/UCQLQXw0RaUrd4oM7GQFUJgg",
+      "what": "cp0x podcast and recordings"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:admin@cp0x.com"
+    }
   ],
   "numbers_2025": {
     "community_perp_volume_usd": "15B+",
     "community_perp_volume_note": "Notional volume traded by the cp0x community on partner exchanges in 2025 (Paradex, Backpack, Extended, Lighter, Derive, Variational)",
     "distributed_to_users_usd": "1.2M+",
-    "distributed_to_users_note": "Referral rewards, token distributions and trading competition prizes passed to users in 2025",
+    "distributed_to_users_note": "Referral rewards, token distributions and trading competition prizes passed to users in 2025; every distribution with its token amount is listed under distributions",
     "lp_deals_facilitated_usd": "15.5M",
     "dao_governance_count": 19,
     "dao_governance_note": "Voting and delegation across 19 DAOs in 2025, including a top-4 delegate position in Lido",
@@ -38,7 +89,68 @@
     "otc_escrow_disputes": 0,
     "developer_competitions": 2,
     "scholarship_placements": 27,
-    "validator_networks": ["Ethereum", "Monad", "Aztec sequencers", "Symbiosis genesis validator", "EigenLayer operator"]
+    "validator_networks": [
+      "Ethereum",
+      "Monad",
+      "Aztec sequencers",
+      "Symbiosis genesis validator",
+      "EigenLayer operator"
+    ]
+  },
+  "distributions": {
+    "note": "Everything cp0x passed on to its users, with token amounts; the live USD value of the token distributions is returned next to this sheet as distributed_to_users",
+    "items": [
+      {
+        "token": "HYPE",
+        "coingecko_id": "hyperliquid",
+        "amount": 280383,
+        "date": "2024-11-29",
+        "value_at_distribution_usd": 1600000,
+        "what": "HYPE earned by cp0x as a Hyperliquid referral partner (Season 1), distributed to the users who traded with the cp0x referral link on the day of the HYPE genesis airdrop",
+        "post": "https://x.com/cp0xdotcom/status/1862591410865688643",
+        "onchain": "https://hypurrscan.io/address/0x2efc09df9bdf3220b5985e0bebca143561a61c6c"
+      },
+      {
+        "token": "RESOLV",
+        "coingecko_id": "resolv",
+        "amount": 3810552.0015,
+        "date": "2025-06",
+        "value_at_distribution_usd": 750000,
+        "what": "RESOLV passed to cp0x users under the cp0x deal with Resolv around the RESOLV token launch, in two tranches of 463,492.0115 and 3,347,059.99"
+      },
+      {
+        "token": "DRV",
+        "coingecko_id": "derive",
+        "amount": 247000,
+        "date": "2025-01",
+        "value_at_distribution_usd": 33345,
+        "what": "DRV prizes of the cp0x trading competition on Derive (December 2024 to January 2025), on top of 42,000 USDC in cash prizes"
+      },
+      {
+        "token": "LIT",
+        "coingecko_id": "lighter",
+        "amount": 102694.8,
+        "date": "2026-01",
+        "value_at_distribution_usd": 250000,
+        "recipients": 334,
+        "what": "LIT distributed to the 334 Lighter accounts referred by cp0x after the LIT token launch"
+      },
+      {
+        "token": "USDC and cash prizes",
+        "amount_usd": 200000,
+        "date": "2025",
+        "value_at_distribution_usd": 200000,
+        "what": "Trading competition prizes in 2025 on Derive, Paradex, Backpack, Extended, Lighter and Variational"
+      },
+      {
+        "token": "DIME",
+        "coingecko_id": "paradex",
+        "amount": null,
+        "date": "2026",
+        "value_at_distribution_usd": null,
+        "what": "25% of the cp0x affiliate TAP token rewards on Paradex are credited to the referred users by Paradex itself; the amount is not published"
+      }
+    ]
   },
   "grant": {
     "program": "Ethereum Foundation Ecosystem Support Program",

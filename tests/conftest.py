@@ -56,6 +56,7 @@ def routes_for_sources():
         sources.FACILITATORS_URL: "facilitators.json",
         sources.RESOURCES_URL: "cp0x_resources.json",
         **({getattr(sources, "GITHUB_REPOS_URL"): "github_repos.json"} if hasattr(sources, "GITHUB_REPOS_URL") else {}),
+        **({getattr(sources, "COINGECKO_PRICES_URL"): "coingecko_prices.json"} if hasattr(sources, "COINGECKO_PRICES_URL") else {}),
     }
 
 

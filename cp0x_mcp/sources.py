@@ -14,12 +14,14 @@ MONITOR_OBSERVATIONS_URL = (
 FACILITATORS_URL = "https://x402-api.cp0x.com/api/free/facilitators"
 RESOURCES_URL = "https://x402-api.cp0x.com/api/free/cp0x-resources"
 GITHUB_REPOS_URL = "https://api.github.com/orgs/cp0x-org/repos?per_page=100&type=public&sort=pushed"
+COINGECKO_PRICES_URL = "https://api.coingecko.com/api/v3/simple/price?ids=hyperliquid,lighter,derive,resolv,paradex&vs_currencies=usd&include_last_updated_at=true"
 
 TTL_DEALS_S = 60
 TTL_RACES_S = 60
 TTL_MONITOR_S = 600
 TTL_X402_S = 300
 TTL_GITHUB_S = 600
+TTL_PRICE_S = 60
 UPSTREAM_BUDGET_PER_MINUTE = 45
 
 

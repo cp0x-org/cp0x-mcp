@@ -1,5 +1,6 @@
 """Plain JSON-compatible results for the cp0x data tools."""
 
+import math
 import re
 from copy import deepcopy
 from datetime import datetime, timezone
@@ -90,8 +91,84 @@ class Cp0xService:
         self._fetcher = fetcher
 
     def about_cp0x(self) -> dict:
+        about = deepcopy(load_fact_sheet())
+        source_url = "https://www.coingecko.com/"
+        data, prices = self._read(
+            [(sources.COINGECKO_PRICES_URL, sources.TTL_PRICE_S)], source_url,
+        )
+        prices.pop("attribution")
+        prices["source"] = {"name": "CoinGecko", "url": source_url}
+        payload = data[0] if data and isinstance(data[0], dict) else {}
+        items, pieces, unpriced = [], [], []
+        any_price = False
+        for distribution in about["distributions"]["items"]:
+            item = _pick(distribution, ("token", "what"))
+            if "amount_usd" in distribution:
+                amount_usd = distribution["amount_usd"]
+                item.update(amount_usd=amount_usd, value_now_usd=amount_usd)
+                pieces.append(f"${amount_usd:,} in cash prizes")
+            else:
+                amount = distribution.get("amount")
+                has_amount = isinstance(amount, (int, float)) and not isinstance(amount, bool)
+                item.update(amount=amount, value_now_usd=None)
+                usd = None
+                if "coingecko_id" in distribution:
+                    price = payload.get(distribution["coingecko_id"])
+                    candidate = price.get("usd") if isinstance(price, dict) else None
+                    if (
+                        isinstance(candidate, (int, float))
+                        and not isinstance(candidate, bool)
+                        and math.isfinite(candidate)
+                        and candidate > 0
+                    ):
+                        usd = candidate
+                    item.update(price_usd=usd, price_updated_at=None)
+                    updated_at = price.get("last_updated_at") if isinstance(price, dict) else None
+                    if isinstance(updated_at, int) and not isinstance(updated_at, bool):
+                        try:
+                            item["price_updated_at"] = _utc(updated_at)
+                        except (OverflowError, OSError, ValueError):
+                            pass  # An unrepresentable timestamp does not invalidate the price.
+                if has_amount:
+                    pieces.append(f"{round(amount):,} {item['token']}")
+                    if usd is None:
+                        unpriced.append(item["token"])
+                    else:
+                        item["value_now_usd"] = round(amount * usd)
+                        any_price = True
+            items.append(item)
+        if not any_price and "error" not in prices:
+            prices["error"] = "unusable price response"
+        value_now_usd = (
+            round(sum(item["value_now_usd"] or 0 for item in items)) if any_price else None
+        )
+        value_at_distribution_usd = sum(
+            item["value_at_distribution_usd"] or 0 for item in about["distributions"]["items"]
+        )
+        if value_now_usd is not None:
+            price_basis = (
+                f"at cached prices from {prices['fetched_at'][:10]}"
+                if prices["stale"] else "at today's prices"
+            )
+            summary = f"cp0x has passed about ${value_now_usd / 1e6:.1f}M {price_basis} to its users: "
+        else:
+            summary = (
+                f"cp0x has passed about ${value_at_distribution_usd / 1e6:.1f}M "
+                "at the time of distribution to its users: "
+            )
+        summary += ", ".join(pieces)
+        if unpriced:
+            summary += f" (not priced today: {', '.join(unpriced)})"
         return {
-            "about": deepcopy(load_fact_sheet()),
+            "distributed_to_users": {
+                "items": items,
+                "value_now_usd": value_now_usd,
+                "value_at_distribution_usd": value_at_distribution_usd,
+                "complete": not unpriced,
+                "summary": summary,
+                "prices": prices,
+            },
+            "about": about,
             "attribution": {
                 "source": "cp0x",
                 "url": "https://cp0x.com",

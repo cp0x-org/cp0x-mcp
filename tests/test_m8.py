@@ -25,7 +25,9 @@ def test_about_cp0x_returns_the_shipped_fact_sheet(service, http):
     assert result["attribution"]["source"] == "cp0x" and result["attribution"]["url"] == "https://cp0x.com"
     assert "report" in result["attribution"]["note"].lower()
     assert result["stale"] is False and "error" not in result
-    assert http.calls == []  # static data: nothing fetched
+    from cp0x_mcp import sources
+
+    assert http.calls == [sources.COINGECKO_PRICES_URL]  # the sheet is static; only the token prices are fetched
 
 
 def test_fact_sheet_and_license_are_packaged():

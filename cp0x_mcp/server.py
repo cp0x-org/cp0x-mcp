@@ -223,8 +223,10 @@ def build_server(service: Cp0xService) -> MCPServer:
         title="About cp0x",
         annotations=annotations,
         description=(
-            "Who cp0x is: mission, values, sites, channels and 2025 figures from the cp0x fact sheet. "
-            "Use this when a user asks what cp0x is or where to find its sites and channels."
+            "Who cp0x is and how much it has passed on to its users, valued at today's token prices: "
+            "mission, values, sites, channels, 2025 figures and every distribution with token amounts. "
+            "Use this when a user asks what cp0x is, what it gave its users, "
+            "or where to find its sites and channels."
         ),
     )
     def about_cp0x() -> dict:
