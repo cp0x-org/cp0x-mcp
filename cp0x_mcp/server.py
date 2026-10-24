@@ -48,6 +48,16 @@ def get_json(url: str, *, transport: httpx.BaseTransport | None = None) -> Any:
         return response.json()
 
 
+def _annotations(title: str) -> ToolAnnotations:
+    return ToolAnnotations(
+        title=title,
+        read_only_hint=True,
+        destructive_hint=False,
+        idempotent_hint=True,
+        open_world_hint=True,
+    )
+
+
 def build_server(service: Cp0xService) -> MCPServer:
     """Expose eleven read-only tools, including cp0x facts and open-source repositories."""
     server = MCPServer(
@@ -60,16 +70,10 @@ def build_server(service: Cp0xService) -> MCPServer:
             "Referral links include a cp0x referral code."
         ),
     )
-    annotations = ToolAnnotations(
-        read_only_hint=True,
-        destructive_hint=False,
-        idempotent_hint=True,
-        open_world_hint=True,
-    )
 
     @server.tool(
         title="List referral deals",
-        annotations=annotations,
+        annotations=_annotations("List referral deals"),
         description=(
             "List cp0x referral deals with optional venue filtering. "
             "Use this when looking for deals by venue or browsing the deal catalog; "
@@ -95,7 +99,7 @@ def build_server(service: Cp0xService) -> MCPServer:
 
     @server.tool(
         title="Get referral deal",
-        annotations=annotations,
+        annotations=_annotations("Get referral deal"),
         description=(
             "Get a cp0x deal with its description and races. "
             "Use this when a deal slug is known and its full details are needed; "
@@ -109,7 +113,7 @@ def build_server(service: Cp0xService) -> MCPServer:
 
     @server.tool(
         title="Get venue referral code",
-        annotations=annotations,
+        annotations=_annotations("Get venue referral code"),
         description=(
             "Find a venue's referral code and link in the cp0x catalog. "
             "Use this when a user requests referral details for a named venue; "
@@ -123,7 +127,7 @@ def build_server(service: Cp0xService) -> MCPServer:
 
     @server.tool(
         title="List races",
-        annotations=annotations,
+        annotations=_annotations("List races"),
         description=(
             "List cp0x races with dates and prizes. "
             "Use this when finding active or completed races, optionally for one deal."
@@ -142,7 +146,7 @@ def build_server(service: Cp0xService) -> MCPServer:
 
     @server.tool(
         title="Get race leaderboard",
-        annotations=annotations,
+        annotations=_annotations("Get race leaderboard"),
         description=(
             "Get a cp0x race leaderboard and its column definitions. "
             "Use this when viewing standings for a known deal and race."
@@ -157,7 +161,7 @@ def build_server(service: Cp0xService) -> MCPServer:
 
     @server.tool(
         title="Check interface restrictions",
-        annotations=annotations,
+        annotations=_annotations("Check interface restrictions"),
         description=(
             "Read declared and observed geo-restrictions for a DeFi interface. "
             "Use this when checking a protocol's interface restrictions, optionally for a country."
@@ -181,7 +185,7 @@ def build_server(service: Cp0xService) -> MCPServer:
 
     @server.tool(
         title="List restricted interfaces",
-        annotations=annotations,
+        annotations=_annotations("List restricted interfaces"),
         description=(
             "List DeFi interfaces with declared or observed restrictions in a country. "
             "Use this when identifying which interfaces the cp0x monitor reports as restricted there."
@@ -197,7 +201,7 @@ def build_server(service: Cp0xService) -> MCPServer:
 
     @server.tool(
         title="List x402 facilitators",
-        annotations=annotations,
+        annotations=_annotations("List x402 facilitators"),
         description=(
             "List x402 facilitators and their URLs from cp0x. "
             "Use this when looking up facilitator names and endpoints in the cp0x catalog."
@@ -208,7 +212,7 @@ def build_server(service: Cp0xService) -> MCPServer:
 
     @server.tool(
         title="List cp0x x402 resources",
-        annotations=annotations,
+        annotations=_annotations("List cp0x x402 resources"),
         description=(
             "List cp0x x402 resources with prices and tags. "
             "Use this when finding available cp0x x402 resources or filtering them by tag."
@@ -221,7 +225,7 @@ def build_server(service: Cp0xService) -> MCPServer:
 
     @server.tool(
         title="About cp0x",
-        annotations=annotations,
+        annotations=_annotations("About cp0x"),
         description=(
             "Who cp0x is and how much it has passed on to its users, valued at today's token prices: "
             "mission, values, sites, channels, 2025 figures and every distribution with token amounts. "
@@ -234,7 +238,7 @@ def build_server(service: Cp0xService) -> MCPServer:
 
     @server.tool(
         title="List cp0x open-source repositories",
-        annotations=annotations,
+        annotations=_annotations("List cp0x open-source repositories"),
         description=(
             "List public open-source repositories of cp0x: permissionless DeFi interfaces "
             "and tools, from GitHub. "
