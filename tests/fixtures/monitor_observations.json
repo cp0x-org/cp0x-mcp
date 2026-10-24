@@ -1,0 +1,261 @@
+{
+ "schema_version": 1,
+ "runs": [
+  {
+   "id": "20261008T155309Z_isp",
+   "started_at": "2026-10-08T15:53:09Z",
+   "finished_at": "2026-10-08T15:56:40Z",
+   "tool": "probe.py/0.1",
+   "proxy_type": "isp",
+   "countries": [
+    "US",
+    "DE"
+   ]
+  },
+  {
+   "id": "20261009T054836Z_isp",
+   "started_at": "2026-10-09T05:48:36Z",
+   "finished_at": "2026-10-09T05:52:25Z",
+   "tool": "probe.py/0.1",
+   "proxy_type": "isp",
+   "countries": [
+    "US",
+    "GB",
+    "DE",
+    "FR",
+    "NL",
+    "AU",
+    "CA",
+    "SG",
+    "JP",
+    "AE",
+    "TR",
+    "BR",
+    "UA"
+   ]
+  }
+ ],
+ "observations": [
+  {
+   "interface_id": "centrifuge",
+   "kind": "site",
+   "url": "https://app.centrifuge.io",
+   "country": "AU",
+   "region": null,
+   "proxy_type": "isp",
+   "vantage": {
+    "ip_country": "AU",
+    "asn": "AS3356",
+    "org": "AS3356 Level 3 Parent, LLC",
+    "verified_by": [
+     "api.country.is",
+     "ipinfo.io",
+     "ifconfig.co"
+    ],
+    "cf_loc": "AU",
+    "verified": true
+   },
+   "at": "2026-10-09T05:50:05Z",
+   "http_status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "server": "cloudflare",
+   "cf_ray": "a47b1b07f89ca96b-SYD",
+   "ms": 1925,
+   "ui_state": "challenge",
+   "flags": {},
+   "body_sha256": "d686998f3ca365e8f31bc4c07f4698d1f4938b30ec88340a813f07c01f762c8f",
+   "excerpt": "Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access centrifuge.io Why have I been blocked? This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There ar",
+   "note": "Cloudflare challenge"
+  },
+  {
+   "interface_id": "centrifuge",
+   "kind": "site",
+   "url": "https://app.centrifuge.io",
+   "country": "GB",
+   "region": null,
+   "proxy_type": "isp",
+   "vantage": {
+    "ip_country": "GB",
+    "asn": "AS212286",
+    "org": "AS212286 LonConnect Ltd",
+    "verified_by": [
+     "api.country.is",
+     "ipinfo.io",
+     "ifconfig.co"
+    ],
+    "cf_loc": "GB",
+    "verified": true
+   },
+   "at": "2026-10-09T05:49:12Z",
+   "http_status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "server": "cloudflare",
+   "cf_ray": "a47b19c5182b26aa-MAN",
+   "ms": 298,
+   "ui_state": "challenge",
+   "flags": {},
+   "body_sha256": "ffeadda8a22927d9ebd5830a8a3ff5d2cb99b51fe78999b8269c04ee8541b616",
+   "excerpt": "Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access centrifuge.io Why have I been blocked? This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There ar",
+   "note": "Cloudflare challenge"
+  },
+  {
+   "interface_id": "centrifuge",
+   "kind": "site",
+   "url": "https://app.centrifuge.io",
+   "country": "JP",
+   "region": null,
+   "proxy_type": "isp",
+   "vantage": {
+    "ip_country": "JP",
+    "asn": "AS3356",
+    "org": "AS3356 Level 3 Parent, LLC",
+    "verified_by": [
+     "api.country.is",
+     "ipinfo.io",
+     "ifconfig.co"
+    ],
+    "cf_loc": "JP",
+    "verified": true
+   },
+   "at": "2026-10-09T05:51:42Z",
+   "http_status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "server": "cloudflare",
+   "cf_ray": "a47b1d6b6c61afd4-NRT",
+   "ms": 1330,
+   "ui_state": "challenge",
+   "flags": {},
+   "body_sha256": "ccf30b574fdb382eb6f42fcadb475b5c8f4ea2fba73f36153566d1a33d9bfbf9",
+   "excerpt": "Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access centrifuge.io Why have I been blocked? This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There ar",
+   "note": "Cloudflare challenge"
+  },
+  {
+   "interface_id": "centrifuge",
+   "kind": "site",
+   "url": "https://app.centrifuge.io",
+   "country": "NL",
+   "region": null,
+   "proxy_type": "isp",
+   "vantage": {
+    "ip_country": "NL",
+    "asn": "AS10753",
+    "org": "AS10753 Level 3 Parent, LLC",
+    "verified_by": [
+     "api.country.is",
+     "ipinfo.io",
+     "ifconfig.co"
+    ],
+    "cf_loc": "NL",
+    "verified": true
+   },
+   "at": "2026-10-09T05:49:33Z",
+   "http_status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "server": "cloudflare",
+   "cf_ray": "a47b1a48cfaa19c0-AMS",
+   "ms": 293,
+   "ui_state": "challenge",
+   "flags": {},
+   "body_sha256": "eb7b5102734a20eca5418ffbd466428b18c617433844549e88d84024d7243821",
+   "excerpt": "Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access centrifuge.io Why have I been blocked? This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There ar",
+   "note": "Cloudflare challenge"
+  },
+  {
+   "interface_id": "centrifuge",
+   "kind": "site",
+   "url": "https://app.centrifuge.io",
+   "country": "US",
+   "region": null,
+   "proxy_type": "isp",
+   "vantage": {
+    "ip_country": "US",
+    "asn": "AS5650",
+    "org": "AS5650 Verizon Business",
+    "verified_by": [
+     "api.country.is",
+     "ipinfo.io",
+     "ifconfig.co"
+    ],
+    "cf_loc": "US",
+    "verified": true
+   },
+   "at": "2026-10-09T05:48:44Z",
+   "http_status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "server": "cloudflare",
+   "cf_ray": "a47b19181b4e86f1-IAD",
+   "ms": 692,
+   "ui_state": "challenge",
+   "flags": {},
+   "body_sha256": "605d290ac7ca4a891055e2d4a130551f05e75554bae0791c68051ce8bb0cfcef",
+   "excerpt": "Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access centrifuge.io Why have I been blocked? This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There ar",
+   "note": "Cloudflare challenge"
+  },
+  {
+   "interface_id": "polymarket",
+   "kind": "geo_endpoint",
+   "url": "https://polymarket.com/api/geoblock",
+   "country": "US",
+   "region": null,
+   "proxy_type": "isp",
+   "vantage": {
+    "ip_country": "US",
+    "asn": "AS5650",
+    "org": "AS5650 Verizon Business",
+    "verified_by": [
+     "api.country.is",
+     "ipinfo.io",
+     "ifconfig.co"
+    ],
+    "cf_loc": null,
+    "verified": true
+   },
+   "at": "2026-10-08T15:56:38Z",
+   "http_status": 200,
+   "final_url": "https://polymarket.com/api/geoblock",
+   "server": "cloudflare",
+   "cf_ray": "a47656253e968678-IAD",
+   "ms": 11285,
+   "ui_state": "blocked",
+   "flags": {
+    "blocked": true,
+    "country": "US",
+    "region": "VA"
+   },
+   "body_sha256": "5d1d840d57655d6f4c7d10e59d50301d2e18f490313108036f86e3bf485f9a27",
+   "excerpt": "{\"blocked\":true,\"ip\":\"9.249.113.0\",\"country\":\"US\",\"region\":\"VA\"}",
+   "note": "flag true"
+  },
+  {
+   "interface_id": "polymarket",
+   "kind": "site",
+   "url": "https://polymarket.com",
+   "country": "US",
+   "region": null,
+   "proxy_type": "isp",
+   "vantage": {
+    "ip_country": "US",
+    "asn": "AS5650",
+    "org": "AS5650 Verizon Business",
+    "verified_by": [
+     "api.country.is",
+     "ipinfo.io",
+     "ifconfig.co"
+    ],
+    "cf_loc": "US",
+    "verified": true
+   },
+   "at": "2026-10-08T15:56:26Z",
+   "http_status": 200,
+   "final_url": "https://polymarket.com",
+   "server": "cloudflare",
+   "cf_ray": "a4765385efc5f5ca-IAD",
+   "ms": 101246,
+   "ui_state": "error",
+   "flags": {},
+   "body_sha256": null,
+   "excerpt": "",
+   "note": "timeout: The read operation timed out"
+  }
+ ]
+}

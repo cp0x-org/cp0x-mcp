@@ -1,0 +1,23 @@
+[project]
+name = "cp0x-mcp"
+version = "0.1.0"
+description = "MCP server exposing cp0x public data: referral deals and races, DeFi interface geo-restrictions monitor, x402 facilitators"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = ["mcp==2.3.0", "httpx>=0.27", "uvicorn>=0.30"]
+
+[project.scripts]
+cp0x-mcp = "cp0x_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["cp0x_mcp*"]
+
+[tool.setuptools.package-data]
+cp0x_mcp = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

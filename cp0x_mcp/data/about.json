@@ -1,0 +1,52 @@
+{
+  "name": "cp0x",
+  "tagline": "cp0x is a community of crypto enthusiasts, developers, and builders united by shared values: permissionless access, open-source development, and putting users first.",
+  "values": [
+    "Permissionless by design: financial tools should be accessible to everyone, everywhere, without gatekeepers",
+    "Open source over closed systems: transparency builds trust, secrecy breeds risk",
+    "User safety over yield: we would rather miss an opportunity than expose users to unnecessary risk",
+    "Long-term thinking: we build for decades, not quarters"
+  ],
+  "what_we_do": "Supporting project launches, managing vaults, curating risk, validating networks, participating in protocol governance, running trading competitions and educational initiatives, and building open, permissionless frontends for DeFi protocols.",
+  "sites": [
+    {"name": "cp0x.com", "url": "https://cp0x.com", "what": "Referral deals with partner exchanges, trading races and leaderboards, docs and the annual report"},
+    {"name": "Permissionless interfaces", "url": "https://pi.cp0x.com", "what": "Open-source frontends for DeFi protocols run by cp0x: no data collection, no geographic restrictions, Tor-compatible"},
+    {"name": "Restricted interfaces monitor", "url": "https://restricted.cp0x.com", "what": "Which official DeFi interfaces restrict which countries, declared by the protocol and observed by probes"},
+    {"name": "x402 ecosystem", "url": "https://x402.cp0x.com", "what": "Facilitators, resources and reports for x402 machine payments"},
+    {"name": "DeFi DNA", "url": "https://defidna.io", "what": "Neutral, open-source aggregator of DeFi risk intelligence: what each risk feed publishes, side by side, with no score of its own", "repo": "https://github.com/cp0x-org/defi-dna"},
+    {"name": "RWA Explorer", "url": "https://rwa.cp0x.com", "what": "Explore tokenized assets, compare issuers, and discover DeFi yield opportunities", "repo": "https://github.com/cp0x-org/rwa-explorer-dashboard"},
+    {"name": "Annual report 2025", "url": "https://cp0x.com/docs/reports/2025", "what": "Full-year figures and activities for 2025"},
+    {"name": "GitHub", "url": "https://github.com/cp0x-org", "what": "Open-source interfaces and tools; see the list_cp0x_open_source tool for the live list"}
+  ],
+  "channels": [
+    {"name": "X", "url": "https://x.com/cp0xdotcom", "handle": "@cp0xdotcom"},
+    {"name": "Telegram channel", "url": "https://t.me/cp0xdotcom"},
+    {"name": "Telegram community chat", "url": "https://t.me/+RcZMsrK_iiBlZTMy"},
+    {"name": "YouTube", "url": "https://www.youtube.com/channel/UCQLQXw0RaUrd4oM7GQFUJgg", "what": "cp0x podcast and recordings"},
+    {"name": "Email", "url": "mailto:admin@cp0x.com"}
+  ],
+  "numbers_2025": {
+    "community_perp_volume_usd": "15B+",
+    "community_perp_volume_note": "Notional volume traded by the cp0x community on partner exchanges in 2025 (Paradex, Backpack, Extended, Lighter, Derive, Variational)",
+    "distributed_to_users_usd": "1.2M+",
+    "distributed_to_users_note": "Referral rewards, token distributions and trading competition prizes passed to users in 2025",
+    "lp_deals_facilitated_usd": "15.5M",
+    "dao_governance_count": 19,
+    "dao_governance_note": "Voting and delegation across 19 DAOs in 2025, including a top-4 delegate position in Lido",
+    "otc_escrow_deals": 38,
+    "otc_escrow_volume_usd": "440k+",
+    "otc_escrow_disputes": 0,
+    "developer_competitions": 2,
+    "scholarship_placements": 27,
+    "validator_networks": ["Ethereum", "Monad", "Aztec sequencers", "Symbiosis genesis validator", "EigenLayer operator"]
+  },
+  "grant": {
+    "program": "Ethereum Foundation Ecosystem Support Program",
+    "announcement": "The Ethereum Foundation has awarded cp0x a grant to build an open-source tool for comparing DeFi risk assessments. We are starting work and invite the community to contribute ideas, data, corrections and code.",
+    "announcement_url": "https://x.com/cp0xdotcom/status/2101927520882823346",
+    "product": "DeFi DNA",
+    "product_url": "https://defidna.io",
+    "repo": "https://github.com/cp0x-org/defi-dna"
+  },
+  "as_of": "Figures from the cp0x 2025 annual report; sites and channels checked on 2026-10-24"
+}
