@@ -139,4 +139,4 @@ Glama reads the root `glama.json` for maintainer metadata when indexing the GitH
 
 ## Disclosure
 
-Deal links contain a cp0x referral code. The server only reads public data; it does not place trades or execute paid x402 requests. MIT license, see `LICENSE`.
+Deal links contain a cp0x referral code. The server only reads public data; it does not place trades or execute paid x402 requests. MIT license, see `LICENSE`. Privacy policy: see `PRIVACY.md`.
