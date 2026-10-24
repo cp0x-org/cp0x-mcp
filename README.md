@@ -1,5 +1,7 @@
 # cp0x MCP
 
+[![tests](https://github.com/cp0x-org/cp0x-mcp/actions/workflows/tests.yml/badge.svg)](https://github.com/cp0x-org/cp0x-mcp/actions/workflows/tests.yml) [![cp0x MCP MCP server – quality and maintenance score on Glama](https://glama.ai/mcp/servers/cp0x-org/cp0x-mcp/badges/score.svg)](https://glama.ai/mcp/servers/cp0x-org/cp0x-mcp)
+
 A read-only MCP server over cp0x public data, owned by [cp0x](https://cp0x.com).
 
 ## Tools
