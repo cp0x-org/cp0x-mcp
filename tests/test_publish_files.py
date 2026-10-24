@@ -25,7 +25,7 @@ def test_server_json_for_registry():
 def test_glama_json_points_at_maintainer():
     data = json.loads((ROOT / "glama.json").read_text(encoding="utf-8"))
     assert data["$schema"] == "https://glama.ai/mcp/schemas/server.json"
-    assert data["maintainers"] == ["cp0x-org"]
+    assert data["maintainers"] == ["illlefr4u"]  # Glama claims need a personal GitHub username, not the org
 
 
 def test_dockerfile_runs_http_transport_on_all_interfaces():
