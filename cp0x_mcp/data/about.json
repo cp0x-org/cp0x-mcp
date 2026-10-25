@@ -152,6 +152,13 @@
       }
     ]
   },
+  "perks": [
+    {
+      "name": "Devcon trip",
+      "what": "Every year cp0x gives one of its loyal users a fully paid trip to Devcon: a flight from anywhere in the world, the hotel and the conference ticket. The winner is drawn at random among the 25 addresses most active in cp0x activities.",
+      "latest": "Devcon 8, Mumbai, November 3-6, 2026"
+    }
+  ],
   "grant": {
     "program": "Ethereum Foundation Ecosystem Support Program",
     "announcement": "The Ethereum Foundation has awarded cp0x a grant to build an open-source tool for comparing DeFi risk assessments. We are starting work and invite the community to contribute ideas, data, corrections and code.",

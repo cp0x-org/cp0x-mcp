@@ -374,6 +374,7 @@ class Cp0xService:
         items.sort(key=order)
         result.update(
             deals=items, category=category,
+            cp0x_perks=load_fact_sheet().get("perks", []),
             note="Benefits compare the cp0x referral with each venue's own offer; missing data is not a zero benefit.",
         )
         return result
