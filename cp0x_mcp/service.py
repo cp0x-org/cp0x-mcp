@@ -8,6 +8,7 @@ from typing import Any, Literal
 
 from . import sources
 from .about import load_fact_sheet
+from .benefits import calculate_benefit, calculate_race_cases, load_benefits, today_utc
 from .referral import code_hint
 from .upstream import Fetcher, UpstreamError
 
@@ -55,6 +56,14 @@ def _result(page_url: str) -> dict:
     }
 
 
+def _merge_freshness(result: dict, freshness: dict) -> None:
+    """Include another source's oldest timestamps, greatest age and stale flag."""
+    for field, aggregate in (("fetched_at", min), ("age_s", max), ("stale_since", min)):
+        values = [value for value in (result.get(field), freshness.get(field)) if value is not None]
+        result[field] = aggregate(values) if values else None
+    result["stale"] = result["stale"] or freshness["stale"]
+
+
 def _utc(timestamp: float) -> str:
     return datetime.fromtimestamp(timestamp, timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
@@ -87,8 +96,10 @@ def _country_status(interface: dict, layers: list[str], close_only: list[str], r
 
 
 class Cp0xService:
-    def __init__(self, fetcher: Fetcher):
+    def __init__(self, fetcher: Fetcher, benefits=None, today=None):
         self._fetcher = fetcher
+        self._benefits = load_benefits() if benefits is None else benefits
+        self._today = today_utc if today is None else today
 
     def about_cp0x(self) -> dict:
         about = deepcopy(load_fact_sheet())
@@ -256,12 +267,16 @@ class Cp0xService:
 
     def get_deal(self, slug: str) -> dict:
         deals, result = self._deals()
-        result["deal"] = None
+        result.update(deal=None, benefit=None, race_cases=None)
         if "error" in result:
             return result
         for deal in deals:
             if deal.get("slug") == slug:
                 result["deal"] = deal
+                result["benefit"] = self._benefit(deal)
+                result["race_cases"] = self._race_cases(deal, result["benefit"])
+                if result["race_cases"] is not None:
+                    _merge_freshness(result, result["race_cases"]["freshness"])
                 result["attribution"]["url"] = deal.get("page_url") or _HOME
                 return result
         result["error"] = f"Unknown deal slug: {slug}"
@@ -270,7 +285,7 @@ class Cp0xService:
 
     def get_referral_code(self, venue: str) -> dict:
         deals, result = self._deals()
-        result.update(match=None, candidates=[])
+        result.update(match=None, candidates=[], benefit=None)
         if "error" in result:
             return result
         needle = venue.strip().casefold()
@@ -284,11 +299,83 @@ class Cp0xService:
         ]
         if len(matches) == 1:
             result["match"] = _compact_deal(matches[0])
+            result["benefit"] = self._benefit(matches[0])
             result["attribution"]["url"] = matches[0].get("page_url") or _HOME
         elif matches:
             result["candidates"] = [_pick(deal, ("slug", "title")) for deal in matches]
         else:
             result["error"] = f"No venue matches: {venue}"
+        return result
+
+    def _benefit(self, deal: dict) -> dict | None:
+        record = self._benefits.get("venues", {}).get(deal.get("slug"))
+        return calculate_benefit(record, self._today()) if record is not None else None
+
+    def _race_cases(self, deal: dict, benefit: dict | None) -> dict | None:
+        if benefit is None:
+            return None
+        boards = []
+        for race in deal.get("races", []):
+            if race.get("status") != "active":
+                continue
+            try:
+                url = sources.race_url(deal["slug"], race["code"])
+            except (KeyError, ValueError):
+                return None
+            data, metadata = self._read([(url, sources.TTL_RACES_S)], deal.get("page_url") or _HOME)
+            if "error" in metadata:
+                return None
+            boards.append((data[0], metadata))
+        if not boards:
+            return None
+        selected, selected_metadata = boards[0]
+        largest_pool = None
+        for board, metadata in boards:
+            prize = (board.get("race") or {}).get("prize") or {}
+            pool = prize.get("pool")
+            if (prize.get("currency") == "USD" and isinstance(pool, (int, float))
+                    and not isinstance(pool, bool) and math.isfinite(pool)
+                    and (largest_pool is None or pool > largest_pool)):
+                selected, largest_pool = board, pool
+                selected_metadata = metadata
+        result = calculate_race_cases(benefit, selected)
+        if result is not None:
+            result["freshness"] = _pick(
+                selected_metadata, ("stale", "fetched_at", "age_s", "stale_since"),
+            )
+        return result
+
+    def compare_referral_benefits(self, category: str | None = None) -> dict:
+        """Compare the cp0x code with each venue's own offer in API order for ties."""
+        deals, result = self._deals()
+        items = []
+        for deal in deals:
+            benefit = self._benefit(deal)
+            if category is not None and (benefit is None or benefit.get("category") != category):
+                continue
+            race_cases = self._race_cases(deal, benefit)
+            if race_cases is not None:
+                _merge_freshness(result, race_cases["freshness"])
+            items.append({
+                **_compact_deal(deal), "benefit": benefit,
+                "race_cases": race_cases,
+            })
+
+        def order(item):
+            benefit = item["benefit"] or {}
+            delta = benefit.get("delta")
+            better = [part for part in delta or [] if part["better"]]
+            if not better:
+                return (1 if delta is not None else 2, 0, 0, 0)
+            saving = (benefit.get("per_10k_usd_traded") or {}).get("saving_vs_original_usd")
+            gap = max(part["cp0x"] - part["original"] for part in better)
+            return (0, saving is None, -saving if saving is not None else 0, -gap)
+
+        items.sort(key=order)
+        result.update(
+            deals=items, category=category,
+            note="Benefits compare the cp0x referral with each venue's own offer; missing data is not a zero benefit.",
+        )
         return result
 
     def list_races(self, status: str | None = None, slug: str | None = None) -> dict:

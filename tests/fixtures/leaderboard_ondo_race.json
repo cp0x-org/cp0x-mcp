@@ -1,0 +1,93 @@
+{
+ "race": {
+  "code": "ondo_race",
+  "deal_slug": "ondo_perps",
+  "title": "Fee race",
+  "last_update": "2026-10-24 12:00",
+  "end_at": "2026-11-30T00:00:00Z",
+  "prize": {
+   "pool": 610,
+   "currency": "USD"
+  }
+ },
+ "columns": [
+  "rank",
+  "wallet",
+  "fees",
+  "prize"
+ ],
+ "entries": [
+  {
+   "rank": 1,
+   "wallet": "0x00...abcd",
+   "fees": 1000,
+   "prize": 500
+  },
+  {
+   "rank": 2,
+   "wallet": "0x01...abcd",
+   "fees": 800,
+   "prize": 40
+  },
+  {
+   "rank": 3,
+   "wallet": "0x02...abcd",
+   "fees": 600,
+   "prize": 20
+  },
+  {
+   "rank": 4,
+   "wallet": "0x03...abcd",
+   "fees": 500,
+   "prize": 10
+  },
+  {
+   "rank": 5,
+   "wallet": "0x04...abcd",
+   "fees": 400,
+   "prize": 10
+  },
+  {
+   "rank": 6,
+   "wallet": "0x05...abcd",
+   "fees": 300,
+   "prize": 10
+  },
+  {
+   "rank": 7,
+   "wallet": "0x06...abcd",
+   "fees": 200,
+   "prize": 10
+  },
+  {
+   "rank": 8,
+   "wallet": "0x07...abcd",
+   "fees": 150,
+   "prize": 10
+  },
+  {
+   "rank": 9,
+   "wallet": "0x08...abcd",
+   "fees": 120,
+   "prize": 0
+  },
+  {
+   "rank": 10,
+   "wallet": "0x09...abcd",
+   "fees": 100,
+   "prize": 0
+  },
+  {
+   "rank": 11,
+   "wallet": "0x10...abcd",
+   "fees": 90,
+   "prize": 0
+  },
+  {
+   "rank": 12,
+   "wallet": "0x11...abcd",
+   "fees": 80,
+   "prize": 0
+  }
+ ]
+}

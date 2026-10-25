@@ -1,0 +1,105 @@
+{
+ "race": {
+  "code": "leaderboard",
+  "deal_slug": "risex",
+  "title": "Leaderboard",
+  "last_update": "2026-10-25 20:00",
+  "prize": {
+   "pool": 1000,
+   "currency": "points"
+  }
+ },
+ "columns": [
+  "rank",
+  "wallet",
+  "volume",
+  "volume_old",
+  "points"
+ ],
+ "entries": [
+  {
+   "rank": 1,
+   "wallet": "0x00...beef",
+   "volume": 900,
+   "volume_old": 0,
+   "points": 400
+  },
+  {
+   "rank": 2,
+   "wallet": "0x01...beef",
+   "volume": 800,
+   "volume_old": 0,
+   "points": 200
+  },
+  {
+   "rank": 3,
+   "wallet": "0x02...beef",
+   "volume": 700,
+   "volume_old": 0,
+   "points": 150
+  },
+  {
+   "rank": 4,
+   "wallet": "0x03...beef",
+   "volume": 600,
+   "volume_old": 0,
+   "points": 100
+  },
+  {
+   "rank": 5,
+   "wallet": "0x04...beef",
+   "volume": 500,
+   "volume_old": 0,
+   "points": 60
+  },
+  {
+   "rank": 6,
+   "wallet": "0x05...beef",
+   "volume": 400,
+   "volume_old": 0,
+   "points": 40
+  },
+  {
+   "rank": 7,
+   "wallet": "0x06...beef",
+   "volume": 300,
+   "volume_old": 0,
+   "points": 30
+  },
+  {
+   "rank": 8,
+   "wallet": "0x07...beef",
+   "volume": 200,
+   "volume_old": 0,
+   "points": 20
+  },
+  {
+   "rank": 9,
+   "wallet": "0x08...beef",
+   "volume": 150,
+   "volume_old": 0,
+   "points": 0
+  },
+  {
+   "rank": 10,
+   "wallet": "0x09...beef",
+   "volume": 120,
+   "volume_old": 0,
+   "points": 0
+  },
+  {
+   "rank": 11,
+   "wallet": "0x10...beef",
+   "volume": 100,
+   "volume_old": 0,
+   "points": 0
+  },
+  {
+   "rank": 12,
+   "wallet": "0x11...beef",
+   "volume": 90,
+   "volume_old": 0,
+   "points": 0
+  }
+ ]
+}

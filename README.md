@@ -9,8 +9,9 @@ A read-only MCP server over cp0x public data, owned by [cp0x](https://cp0x.com).
 | Tool | Returns | Arguments |
 | --- | --- | --- |
 | `list_deals` | Matching deals with bonuses, referral links and codes, race summaries, and the total match count. | Optional `query`: case-insensitive substring of venue title or slug (up to 100 characters); optional `limit`: 1–100, all matches when omitted. |
-| `get_deal` | The complete deal record, including its description and races; known slugs if the deal is missing. | Required `slug`: deal slug (up to 100 characters). |
+| `get_deal` | The complete deal record, including its description and races, with adjacent `benefit` comparisons and `race_cases` examples (null when unavailable); known slugs if the deal is missing. | Required `slug`: deal slug (up to 100 characters). |
 | `get_referral_code` | A matching venue's deal, referral code, and link, or candidate names and slugs if ambiguous. | Required `venue`: venue name or slug (up to 100 characters); exact matches take priority over substring matches. |
+| `compare_referral_benefits` | Compact deals with `benefit` comparisons against each venue's own referral offer and `race_cases` from active leaderboards, ordered by additional benefit. | Optional `category`: venue category (up to 40 characters); all deals when omitted. |
 | `list_races` | Race codes, titles, statuses, dates, and the deal slug for each race. | Optional `status`: `active` or `completed`, both when omitted; optional `slug`: deal slug (up to 100 characters). |
 | `get_leaderboard` | Race details, column definitions, leading entries, and the total entry count. | Required `slug` (up to 100 characters); optional `race_code` (default `leaderboard`); optional `top`: 1–100 (default 20). |
 | `check_interface_restrictions` | An interface's declared restrictions, observed probes, alternatives, legend, snapshot version, and `country_match`; candidate interfaces if no exact match exists. | Required `protocol`: interface name or ID (up to 100 characters); optional `country`: ISO 3166 alpha-2 code, all observed countries when omitted. |

@@ -12,6 +12,7 @@ from tests.conftest import FakeClock
 
 TOOL_NAMES = {
     "list_deals",
+    "compare_referral_benefits",
     "get_deal",
     "get_referral_code",
     "list_races",

@@ -1,0 +1,901 @@
+{
+ "version": 1,
+ "venues": {
+  "ondo_perps": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "fee_discount",
+     "value": 5,
+     "unit": "%",
+     "applies_to": "trading_fees",
+     "quote": "Sign up through the cp0x referral link to get 5% off trading fees: app.ondoperps.xyz/?ref=JL59WM",
+     "source_url": "https://cp0x.com/deals/ondo_perps"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "fee_discount",
+      "value": 5,
+      "unit": "%",
+      "applies_to": "trading_fees_during_referral_program",
+      "quote": "they receive a 5% fee discount for the duration of the program.",
+      "source_url": "https://ondoperps.xyz/blog/multiple-ways-to-earn"
+     }
+    ]
+   },
+   "taker_fee_bps": 2.5,
+   "fees_source_url": "https://docs.ondoperps.xyz/fees",
+   "checked_at": "2026-10-25",
+   "fees_note": "Promotional taker rate; the base rate is 5 bps."
+  },
+  "risex": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 20,
+     "unit": "%",
+     "applies_to": "points",
+     "quote": "20% point boost credited straight to your account",
+     "source_url": "https://cp0x.com/deals/risex"
+    },
+    {
+     "kind": "tier_upgrade",
+     "value": null,
+     "unit": null,
+     "applies_to": "tier_3_first_60_days_after_leaderboard_start_via_monthly_rebates",
+     "quote": "Tier 3 fee discount for the first 60 days after the leaderboard starts (via monthly rebates)",
+     "source_url": "https://cp0x.com/deals/risex"
+    }
+   ],
+   "original": {
+    "status": "none",
+    "items": [
+     {
+      "kind": "other",
+      "value": null,
+      "unit": null,
+      "applies_to": "standard_referral_no_stated_invitee_bonus",
+      "quote": "A standard referral link earns you the 10% points share.",
+      "source_url": "https://docs.risechain.com/docs/risex/rewards/Referrals-Affiliates-Program"
+     }
+    ]
+   },
+   "taker_fee_bps": 3,
+   "fees_source_url": "https://docs.risechain.com/docs/risex/trading/fees",
+   "checked_at": "2026-10-25",
+   "fees_note": "Lowest-tier perpetual taker rate."
+  },
+  "extended": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 20,
+     "unit": "%",
+     "applies_to": "points (15% credited directly, 5% via the cp0x leaderboard)",
+     "quote": "cp0x bonuses: 20% bonus to points 15% credited directly to the account 5% distributed via the cp0x leaderboard",
+     "source_url": "https://cp0x.com/deals/extended"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "fee_discount",
+      "value": 10,
+      "unit": "%",
+      "applies_to": "commissions_first_50M_USD_total_trading_volume",
+      "quote": "Invited users receive a 10% discount on commissions for their first $50M in total trading volume.",
+      "source_url": "https://docs.extended.exchange/extended-resources/referrals-and-affiliates"
+     }
+    ]
+   },
+   "taker_fee_bps": 2.5,
+   "fees_source_url": "https://docs.extended.exchange/extended-resources/trading/trading-fees-and-rebates",
+   "checked_at": "2026-10-25",
+   "fees_note": "Regular perpetual and spot taker rate."
+  },
+  "variational_omni": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 18,
+     "unit": "%",
+     "applies_to": "points",
+     "quote": "Sign up for Variational Omni with the cp0x code OMNICP0X to get an 18% boost on the points you earn and Silver tier for 90 days, which normally takes $5 million in monthly volume.",
+     "source_url": "https://cp0x.com/deals/variational_omni"
+    },
+    {
+     "kind": "tier_upgrade",
+     "value": null,
+     "unit": null,
+     "applies_to": "silver_tier_first_90_days",
+     "quote": "Silver tier for 90 days, which normally needs $5 million in monthly volume and adds a further 1% points boost",
+     "source_url": "https://cp0x.com/deals/variational_omni"
+    }
+   ],
+   "original": {
+    "status": "none",
+    "items": [
+     {
+      "kind": "other",
+      "value": null,
+      "unit": null,
+      "applies_to": "standard_referral_no_stated_invitee_bonus",
+      "quote": "On Omni, users that refer other traders earn rewards in USDC based on the activity of their referrals.",
+      "source_url": "https://docs.variational.io/omni/rewards/referrals"
+     }
+    ]
+   },
+   "taker_fee_bps": 0,
+   "fees_source_url": "https://docs.variational.io/omni/trading/fees",
+   "checked_at": "2026-10-25",
+   "fees_note": "No trading fees on Omni; spreads and other costs are separate."
+  },
+  "preddy": {
+   "category": "prediction",
+   "cp0x": [
+    {
+     "kind": "fee_rebate",
+     "value": 20,
+     "unit": "%",
+     "applies_to": "paid_market_fees_rebated_every_10_days",
+     "quote": "Get 20% market fee rebates every 10 days",
+     "source_url": "https://cp0x.com/deals/preddy"
+    },
+    {
+     "kind": "token_bonus",
+     "value": null,
+     "unit": "tokens",
+     "applies_to": "share_of_Polymarket_builder_drop",
+     "quote": "share of Polymarket builder drop",
+     "source_url": "https://cp0x.com/deals/preddy"
+    }
+   ],
+   "original": {
+    "status": "not_found",
+    "searched": [
+     "https://preddy.trade/affiliate",
+     "https://preddy.trade/",
+     "https://preddy.trade/referrals"
+    ]
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "polymarket_perps": {
+   "category": "prediction",
+   "cp0x": [
+    {
+     "kind": "other",
+     "value": null,
+     "unit": null,
+     "applies_to": "future_referral_benefits_pending",
+     "quote": "Terms in the works, referral already live",
+     "source_url": "https://cp0x.com/deals/polymarket_perps"
+    }
+   ],
+   "original": {
+    "status": "none",
+    "items": [
+     {
+      "kind": "other",
+      "value": null,
+      "unit": null,
+      "applies_to": "invited_Perps_trader",
+      "quote": "No separate bonus is paid to the trader you invite",
+      "source_url": "https://docs.polymarket.com/perps/referral-program"
+     }
+    ]
+   },
+   "taker_fee_bps": 4,
+   "fees_source_url": "https://docs.polymarket.com/perps/learn-about-trading/fees",
+   "checked_at": "2026-10-25",
+   "fees_note": "Entry-tier taker rate for new accounts; builder fees are separate."
+  },
+  "hyperliquid": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "fee_discount",
+     "value": 4,
+     "unit": "%",
+     "applies_to": "trading_fees",
+     "quote": "4%+ fee discount (leaderboard ended)",
+     "source_url": "https://cp0x.com/deals/hyperliquid"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "fee_discount",
+      "value": 4,
+      "unit": "%",
+      "applies_to": "trading_fees_first_25M_USD_volume",
+      "quote": "Using a referral code will give you a 4% discount on your fees for your first $25M in volume.",
+      "source_url": "https://hyperliquid.gitbook.io/hyperliquid-docs/referrals"
+     }
+    ]
+   },
+   "taker_fee_bps": 4.5,
+   "fees_source_url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees",
+   "checked_at": "2026-10-25",
+   "fees_note": "Base-tier perpetual taker rate before referral or staking discounts."
+  },
+  "lighter": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 10,
+     "unit": "%",
+     "applies_to": "points",
+     "quote": "10% points",
+     "source_url": "https://cp0x.com/deals/lighter"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "fee_rebate",
+      "value": 10,
+      "unit": "%",
+      "applies_to": "paid_trading_fees_rebated_each_monday",
+      "quote": "a 10% discount on fees you pay, rebated every Monday.",
+      "source_url": "https://docs.lighter.xyz/programs/referral-program"
+     },
+     {
+      "kind": "fee_rebate",
+      "value": null,
+      "unit": "%",
+      "applies_to": "first_week_premium_or_advanced_fees",
+      "quote": "Referred users get their first week of Premium/Advanced fees rebated.",
+      "source_url": "https://docs.lighter.xyz/programs/referral-program"
+     }
+    ]
+   },
+   "taker_fee_bps": 0,
+   "fees_source_url": "https://docs.lighter.xyz/trading/trading-fees",
+   "checked_at": "2026-10-25",
+   "fees_note": "Standard account, regular perpetual and spot orders; other account types differ."
+  },
+  "backpack": {
+   "category": "exchange",
+   "cp0x": [
+    {
+     "kind": "fee_rebate",
+     "value": 20,
+     "unit": "%",
+     "applies_to": "trading_fees",
+     "quote": "receive a 20% fee rebate.",
+     "source_url": "https://cp0x.com/deals/backpack"
+    }
+   ],
+   "original": {
+    "status": "none",
+    "items": [
+     {
+      "kind": "other",
+      "value": null,
+      "unit": null,
+      "applies_to": "standard_referral_no_stated_invitee_bonus",
+      "quote": "Your referrer will begin receiving rebates, and you’ll gain access to all of Backpack Exchange’s features.",
+      "source_url": "https://support.backpack.exchange/exchange/programs/referrals"
+     }
+    ]
+   },
+   "taker_fee_bps": 5,
+   "fees_source_url": "https://support.backpack.exchange/exchange/trading/trading-fees",
+   "checked_at": "2026-10-25",
+   "fees_note": "Lowest-tier perpetual futures taker rate; the spot taker rate is 10 bps."
+  },
+  "nansen": {
+   "category": "analytics",
+   "cp0x": [
+    {
+     "kind": "fee_discount",
+     "value": 15,
+     "unit": "%",
+     "applies_to": "Pioneer_or_Pro_subscription_1M_6M_1Y",
+     "quote": "Using our link, you’ll get a 15% discount on a 1M / 6M / 1Y subscription to the Pioneer or Pro plan.",
+     "source_url": "https://cp0x.com/deals/nansen"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "fee_discount",
+      "value": 10,
+      "unit": "%",
+      "applies_to": "subscriptions_and_API_credits",
+      "quote": "subscriptions and API credits (10% off)",
+      "source_url": "https://release.nansen.ai/en/help/articles/2260036-referral-program-faq"
+     },
+     {
+      "kind": "fee_discount",
+      "value": null,
+      "unit": "bps",
+      "applies_to": "spot_trading_fees_while_Unranked",
+      "quote": "67 bps instead of 75, while they are Unranked.",
+      "source_url": "https://release.nansen.ai/en/help/articles/2260036-referral-program-faq"
+     }
+    ]
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "vooi": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "fee_rebate",
+     "value": 20,
+     "unit": "%",
+     "applies_to": "VOOI fees paid (cp0x returns 20 of its 25% referral share)",
+     "quote": "cp0x returns 20% of the VOOI fees users pay (20 of its 25% referral share); cp0x owner statement, 2026-10-25",
+     "source_url": "https://cp0x.com/deals/vooi"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "fee_rebate",
+      "value": 10,
+      "unit": "%",
+      "applies_to": "VOOI_Ultra_app_fees_only",
+      "quote": "Your referrals get 10%\nof the VOOI fees they pay",
+      "source_url": "https://ultra.vooi.io/referral"
+     }
+    ]
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "barter": {
+   "category": "dex",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 8,
+     "unit": "%",
+     "applies_to": "own_points_returned",
+     "quote": "Use our code when signing up - and get +8% of your points back.",
+     "source_url": "https://cp0x.com/deals/barter"
+    }
+   ],
+   "original": {
+    "status": "not_found",
+    "searched": [
+     "https://app.barterswap.xyz/points",
+     "https://barterswap.xyz/",
+     "https://barterdefi.gitbook.io/barter-docs",
+     "https://barterdefi-1.gitbook.io/barter"
+    ]
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "ostium": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 16,
+     "unit": "%",
+     "applies_to": "points_automatic_referral_boost",
+     "quote": "Instant Bonus: +16% point boost when signing up through our link — automatically applied and visible in the interface.",
+     "source_url": "https://cp0x.com/deals/ostium"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "points_boost",
+      "value": 12,
+      "unit": "%",
+      "applies_to": "trading_scores_referrer_tier_5_referred_volume_at_least_100000000_USD",
+      "quote": "5 $100,000,000 12%",
+      "source_url": "https://ostium-labs.gitbook.io/ostium-docs/referrals"
+     }
+    ]
+   },
+   "taker_fee_bps": 10,
+   "fees_source_url": "https://docs.ostium.com/traders/reference/markets",
+   "checked_at": "2026-10-25",
+   "fees_note": "Opening fee for crypto perpetuals; other asset classes differ."
+  },
+  "tramplin": {
+   "category": "staking",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 2,
+     "unit": "x",
+     "applies_to": "points_for_effective_stake",
+     "quote": "x2 points for effective stake",
+     "source_url": "https://cp0x.com/deals/tramplin"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "points_boost",
+      "value": 2,
+      "unit": "x",
+      "applies_to": "effective_stake_on_first_deposit",
+      "quote": "The invited staker receives Boost Points that grant a 2x multiplier on their effective stake for their first deposit.",
+      "source_url": "https://blog.tramplin.io/introducing-tramplins-referral-program/"
+     }
+    ]
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "paradex": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 15,
+     "unit": "%",
+     "applies_to": "earned_XP_credited_directly",
+     "quote": "15% bonus to earned XP, credited directly to their account",
+     "source_url": "https://cp0x.com/deals/paradex"
+    },
+    {
+     "kind": "token_bonus",
+     "value": 25,
+     "unit": "%",
+     "applies_to": "cp0x_affiliate_TAP_points_token_allocation_after_TGE",
+     "quote": "25% TAP points (part of the 1% token supply allocated to affiliates)",
+     "source_url": "https://cp0x.com/deals/paradex"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "points_boost",
+      "value": 5,
+      "unit": "%",
+      "applies_to": "trading_activity_XP",
+      "quote": "Referees get 5% XP bonus on their trading activity",
+      "source_url": "https://docs.paradex.trade/docs/xp-referrals/affiliate-referrals"
+     }
+    ]
+   },
+   "taker_fee_bps": 0,
+   "fees_source_url": "https://docs.paradex.trade/trading/trading-fees",
+   "checked_at": "2026-10-25",
+   "fees_note": "Retail rate on all products."
+  },
+  "curvance": {
+   "category": "lending",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 20,
+     "unit": "%",
+     "applies_to": "Bytes_automatically_current_reward_structure_until_December_17",
+     "quote": "Using our referral link grants a +20% bonus on Bytes",
+     "source_url": "https://cp0x.com/deals/curvance"
+    },
+    {
+     "kind": "fee_rebate",
+     "value": 20,
+     "unit": "%",
+     "applies_to": "platform_fees_manual_rebate_current_reward_structure_until_December_17",
+     "quote": "Additionally, 20% of the platform fees generated from the user are rebated manually",
+     "source_url": "https://cp0x.com/deals/curvance"
+    }
+   ],
+   "original": {
+    "status": "not_found",
+    "searched": [
+     "https://app.curvance.com/bytes?tab=referral",
+     "https://app.curvance.com/leaderboard/referrals",
+     "https://app.curvance.com/leaderboard/referrals?referral=web3_air",
+     "https://docs.curvance.com/app"
+    ]
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25",
+   "conditions": [
+    {
+     "text": "The current reward structure is active until December 17 .",
+     "source_url": "https://cp0x.com/deals/curvance"
+    }
+   ]
+  },
+  "ammalgam": {
+   "category": "defi",
+   "cp0x": [
+    {
+     "kind": "token_bonus",
+     "value": 5,
+     "unit": "%",
+     "applies_to": "AMG_referral_rewards_returned_to_participants_90_or_180_day_lock",
+     "quote": "cp0x returns 5% of referral rewards in tokens to participants.",
+     "source_url": "https://cp0x.com/deals/ammalgam"
+    },
+    {
+     "kind": "other",
+     "value": 50,
+     "unit": "%",
+     "applies_to": "protocol_fee_revenue_share_90_or_180_day_lock",
+     "quote": "50% of protocol fees (origination fee on loans + 10% of all interest accrued) is distributed among participants.",
+     "source_url": "https://cp0x.com/deals/ammalgam"
+    },
+    {
+     "kind": "fee_discount",
+     "value": 50,
+     "unit": "%",
+     "applies_to": "vault_management_and_performance_fees_90_or_180_day_lock",
+     "quote": "Deal participants receive a 50% discount: effective rates are 0.5% management and 5% performance.",
+     "source_url": "https://cp0x.com/deals/ammalgam"
+    },
+    {
+     "kind": "other",
+     "value": 33,
+     "unit": "%",
+     "applies_to": "base_AMG_allocation_with_12_month_linear_vesting",
+     "quote": "TGE 20% + 12-month linear unlock (80%) + 33% bonus tokens on top of the base allocation",
+     "source_url": "https://cp0x.com/deals/ammalgam"
+    }
+   ],
+   "original": {
+    "status": "not_found",
+    "searched": [
+     "https://docs.ammalgam.xyz/docs/overview",
+     "https://app.ammalgam.xyz/",
+     "https://ammalgam.xyz/",
+     "https://www.notion.so/duelinggalois/Ammalgam-Vaults-29b3195c2bf580c98cf0d5f6e8622ffe"
+    ]
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25",
+   "conditions": [
+    {
+     "text": "Important: to participate you must fill out the application form before March 18, 2026, 23:59 UTC",
+     "source_url": "https://cp0x.com/deals/ammalgam"
+    },
+    {
+     "text": "Deposit ETH or USDC for 90 or 180 days. Hard lock format: if the deposit amount decreases by any amount, all accrued rewards are forfeited.",
+     "source_url": "https://cp0x.com/deals/ammalgam"
+    }
+   ]
+  },
+  "mellow": {
+   "category": "staking",
+   "cp0x": [
+    {
+     "kind": "loyalty",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x loyalty",
+     "quote": "cp0x loyalty (cp0x LRT Vault)",
+     "source_url": "https://cp0x.com/deals/mellow"
+    }
+   ],
+   "original": {
+    "status": "not_applicable"
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "ethena": {
+   "category": "staking",
+   "cp0x": [
+    {
+     "kind": "loyalty",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x loyalty",
+     "quote": "cp0x loyalty (+30% APY ended)",
+     "source_url": "https://cp0x.com/deals/ethena"
+    }
+   ],
+   "original": {
+    "status": "not_applicable"
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "infinex": {
+   "category": "wallet",
+   "cp0x": [
+    {
+     "kind": "loyalty",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x loyalty",
+     "quote": "cp0x loyalty",
+     "source_url": "https://cp0x.com/deals/infinex"
+    }
+   ],
+   "original": {
+    "status": "not_applicable"
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "fluence": {
+   "category": "depin",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 30,
+     "unit": "%",
+     "applies_to": "Pointless_program_points",
+     "quote": "members of our community receive a +30% point boost by joining through our link:",
+     "source_url": "https://cp0x.com/deals/fluence"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "points_boost",
+      "value": null,
+      "unit": null,
+      "applies_to": "Pointless_points_for_verified_referrals",
+      "quote": "Referrals. Each verified referral boosts both the referrer’s and referee’s point totals.",
+      "source_url": "https://fluence.ai/blog/fluence-monthly-recap-june-2025/"
+     }
+    ],
+    "searched": [
+     "https://fluence.ai/blog/fluence-monthly-recap-june-2025/",
+     "https://fluence.ai/blog/fluence-pointless-program/",
+     "https://pointless.fluence.ai/"
+    ]
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "symbiotic": {
+   "category": "staking",
+   "cp0x": [
+    {
+     "kind": "loyalty",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x loyalty",
+     "quote": "cp0x loyalty (cp0x LRT Vault)",
+     "source_url": "https://cp0x.com/deals/symbiotic"
+    }
+   ],
+   "original": {
+    "status": "not_applicable"
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "gearbox": {
+   "category": "lending",
+   "cp0x": [
+    {
+     "kind": "other",
+     "value": 2.33,
+     "unit": "%",
+     "applies_to": "additional_wstETH_incentive_APY_until_October_18_2025",
+     "quote": "wstETH Incentive: additional boost until October 18, 2025 2.33%",
+     "source_url": "https://cp0x.com/deals/gearbox"
+    },
+    {
+     "kind": "points_boost",
+     "value": 19,
+     "unit": "x",
+     "applies_to": "Mellow_points_in_looping_strategy",
+     "quote": "Bonuses: Mellow Points ~19x and Symbiotic Points ~9.5x.",
+     "source_url": "https://cp0x.com/deals/gearbox"
+    },
+    {
+     "kind": "other",
+     "value": 9.5,
+     "unit": "x",
+     "applies_to": "Symbiotic_points_in_looping_strategy",
+     "quote": "Bonuses: Mellow Points ~19x and Symbiotic Points ~9.5x.",
+     "source_url": "https://cp0x.com/deals/gearbox"
+    }
+   ],
+   "original": {
+    "status": "not_found",
+    "searched": [
+     "https://gearbox.fi/",
+     "https://docs.gearbox.fi/",
+     "https://blog.gearbox.finance/",
+     "https://app.gearbox.fi/pools/1/0x72ccb97cbdc40f8fb7ffa42ed93ae74923547200"
+    ]
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25",
+   "conditions": [
+    {
+     "text": "In this strategy, cp0x retains 50% of the points as compensation for providing incentives to the pool.",
+     "source_url": "https://cp0x.com/deals/gearbox"
+    }
+   ]
+  },
+  "graph": {
+   "category": "staking",
+   "cp0x": [
+    {
+     "kind": "loyalty",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x loyalty",
+     "quote": "cp0x loyalty",
+     "source_url": "https://cp0x.com/deals/graph"
+    }
+   ],
+   "original": {
+    "status": "not_applicable"
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "lido": {
+   "category": "staking",
+   "cp0x": [
+    {
+     "kind": "loyalty",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x loyalty",
+     "quote": "cp0x loyalty",
+     "source_url": "https://cp0x.com/deals/lido"
+    }
+   ],
+   "original": {
+    "status": "not_applicable"
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "tally_arb": {
+   "category": "governance",
+   "cp0x": [
+    {
+     "kind": "loyalty",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x loyalty",
+     "quote": "cp0x loyalty",
+     "source_url": "https://cp0x.com/deals/tally_arb"
+    }
+   ],
+   "original": {
+    "status": "not_applicable"
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "tally_op": {
+   "category": "governance",
+   "cp0x": [
+    {
+     "kind": "loyalty",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x loyalty",
+     "quote": "cp0x loyalty",
+     "source_url": "https://cp0x.com/deals/tally_op"
+    }
+   ],
+   "original": {
+    "status": "not_applicable"
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  },
+  "bybit": {
+   "category": "exchange",
+   "cp0x": [
+    {
+     "kind": "other",
+     "value": null,
+     "unit": null,
+     "applies_to": "the standard Bybit new-user rewards",
+     "quote": "Deposit $100 within 7 days of signing up — receive a $10 bonus",
+     "source_url": "https://cp0x.com/deals/bybit"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "other",
+      "value": 10,
+      "unit": "USD",
+      "applies_to": "deposit_at_least_100_USD_within_7_days_of_signup",
+      "quote": "a 10 USDT bonus for both parties.",
+      "source_url": "https://www.bybit.com/en/learn/bybit-guide/what-is-bybit-referral-program"
+     },
+     {
+      "kind": "other",
+      "value": 7,
+      "unit": "USD",
+      "applies_to": "additional_fiat_deposit_at_least_100_USD_within_7_days_of_signup",
+      "quote": "an additional 7 USDT is credited to both of you.",
+      "source_url": "https://www.bybit.com/en/learn/bybit-guide/what-is-bybit-referral-program"
+     },
+     {
+      "kind": "other",
+      "value": 15,
+      "unit": "USD",
+      "applies_to": "qualifying_deposit_100_USD_within_7_days_and_trade_500_USD_within_30_days",
+      "quote": "both the referrer and referee will receive a 15 USDT bonus.",
+      "source_url": "https://www.bybit.com/en/help-center/article/Bybit-Referral-Program-General-FAQ"
+     },
+     {
+      "kind": "other",
+      "value": 1000,
+      "unit": "USD",
+      "applies_to": "mystery_box_up_to_1000_USDT_qualifying_deposit_and_trade_10000_USD_within_30_days",
+      "quote": "a Mystery Box worth up to 1,000 USDT.",
+      "source_url": "https://www.bybit.com/en/help-center/article/Bybit-Referral-Program-General-FAQ"
+     },
+     {
+      "kind": "other",
+      "value": 3,
+      "unit": "USD",
+      "applies_to": "stake_at_least_100_USD_in_flexible_or_fixed_savings_within_7_days_of_signup",
+      "quote": "3 USDT in rewards.",
+      "source_url": "https://www.bybit.com/en/help-center/article/Bybit-Referral-Program-General-FAQ"
+     }
+    ]
+   },
+   "taker_fee_bps": 5.5,
+   "fees_source_url": "https://www.bybit.com/en/help-center/article/Trading-Fee-Structure",
+   "checked_at": "2026-10-25",
+   "fees_note": "VIP 0 perpetual and futures taker rate; spot is 10 bps and rates can vary by region."
+  },
+  "utorg": {
+   "category": "payments",
+   "cp0x": [
+    {
+     "kind": "loyalty",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x loyalty",
+     "quote": "cp0x loyalty",
+     "source_url": "https://cp0x.com/deals/utorg"
+    }
+   ],
+   "original": {
+    "status": "not_applicable"
+   },
+   "taker_fee_bps": null,
+   "fees_source_url": null,
+   "checked_at": "2026-10-25"
+  }
+ }
+}

@@ -59,11 +59,12 @@ def _annotations(title: str) -> ToolAnnotations:
 
 
 def build_server(service: Cp0xService) -> MCPServer:
-    """Expose eleven read-only tools, including cp0x facts and open-source repositories."""
+    """Expose twelve read-only tools, including cp0x facts and open-source repositories."""
     server = MCPServer(
         "cp0x",
         instructions=(
-            "Eleven read-only tools for cp0x data: referral deals and races, a monitor of DeFi "
+            "Twelve read-only tools for cp0x data: referral deals and races, "
+            "a comparison of the cp0x referral benefit with each venue's own offer, a monitor of DeFi "
             "interface geo-restrictions, x402 facilitators and resources, "
             "a static cp0x fact sheet with mission, values, sites, channels and 2025 figures, "
             "and public open-source repositories from GitHub. "
@@ -124,6 +125,22 @@ def build_server(service: Cp0xService) -> MCPServer:
         venue: Annotated[str, Field(description="Venue name or deal slug to match.", max_length=100)],
     ) -> dict:
         return service.get_referral_code(venue=venue)
+
+    @server.tool(
+        title="Compare referral benefits",
+        annotations=_annotations("Compare referral benefits"),
+        description=(
+            "Compare the benefit the cp0x referral gives over each venue's own referral offer, "
+            "with example volumes from live cp0x races. Use this when the user wants to know "
+            "what a cp0x referral code adds on a venue or across a category of venues."
+        ),
+    )
+    def compare_referral_benefits(
+        category: Annotated[
+            str | None, Field(description="Venue category to include; omit for all deals.", max_length=40)
+        ] = None,
+    ) -> dict:
+        return service.compare_referral_benefits(category=category)
 
     @server.tool(
         title="List races",

@@ -1,0 +1,228 @@
+{
+ "version": 1,
+ "venues": {
+  "ondo_perps": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "fee_discount",
+     "value": 5,
+     "unit": "%",
+     "applies_to": "trading_fees",
+     "quote": "fee_discount 5",
+     "source_url": "https://cp0x.com/deals/ondo_perps"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "fee_discount",
+      "value": 3,
+      "unit": "%",
+      "applies_to": "trading_fees",
+      "quote": "fee_discount 3",
+      "source_url": "https://docs.example.org/referral"
+     }
+    ]
+   },
+   "taker_fee_bps": 4.0,
+   "fees_source_url": "https://docs.example.org/fees",
+   "checked_at": "2026-10-20"
+  },
+  "risex": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 20,
+     "unit": "%",
+     "applies_to": "points",
+     "quote": "points_boost 20",
+     "source_url": "https://cp0x.com/deals/risex"
+    },
+    {
+     "kind": "tier_upgrade",
+     "value": null,
+     "unit": null,
+     "applies_to": "tier 3 for 60 days",
+     "quote": "tier_upgrade None",
+     "source_url": "https://cp0x.com/deals/risex"
+    }
+   ],
+   "original": {
+    "status": "none",
+    "items": [
+     {
+      "kind": "other",
+      "value": null,
+      "unit": null,
+      "applies_to": "referee gets nothing",
+      "quote": "other None",
+      "source_url": "https://docs.example.org/referral"
+     }
+    ]
+   },
+   "taker_fee_bps": 3.0,
+   "fees_source_url": "https://docs.example.org/fees",
+   "checked_at": "2026-10-20"
+  },
+  "hyperliquid": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "fee_discount",
+     "value": 4,
+     "unit": "%",
+     "applies_to": "trading_fees",
+     "quote": "fee_discount 4",
+     "source_url": "https://cp0x.com/deals/hyperliquid"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "fee_discount",
+      "value": 4,
+      "unit": "%",
+      "applies_to": "trading_fees",
+      "quote": "fee_discount 4",
+      "source_url": "https://docs.example.org/referral"
+     }
+    ]
+   },
+   "taker_fee_bps": 4.5,
+   "fees_source_url": "https://docs.example.org/fees",
+   "checked_at": "2026-10-20"
+  },
+  "lighter": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 10,
+     "unit": "%",
+     "applies_to": "points",
+     "quote": "points_boost 10",
+     "source_url": "https://cp0x.com/deals/lighter"
+    }
+   ],
+   "original": {
+    "status": "not_found",
+    "searched": [
+     "https://a.example.org/x",
+     "https://b.example.org/y"
+    ]
+   },
+   "taker_fee_bps": null,
+   "checked_at": "2026-10-20"
+  },
+  "vooi": {
+   "category": "spot",
+   "cp0x": [
+    {
+     "kind": "points_boost",
+     "value": 15,
+     "unit": "%",
+     "applies_to": "points",
+     "quote": "points_boost 15",
+     "source_url": "https://cp0x.com/deals/vooi"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "points_boost",
+      "value": 20,
+      "unit": "%",
+      "applies_to": "points",
+      "quote": "points_boost 20",
+      "source_url": "https://docs.example.org/referral"
+     }
+    ]
+   },
+   "taker_fee_bps": null,
+   "checked_at": "2026-10-20"
+  },
+  "preddy": {
+   "category": "prediction",
+   "cp0x": [
+    {
+     "kind": "fee_rebate",
+     "value": 25,
+     "unit": "%",
+     "applies_to": "trading_fees",
+     "quote": "fee_rebate 25",
+     "source_url": "https://cp0x.com/deals/preddy"
+    }
+   ],
+   "original": {
+    "status": "none",
+    "items": [
+     {
+      "kind": "other",
+      "value": null,
+      "unit": null,
+      "applies_to": "referee gets nothing",
+      "quote": "other None",
+      "source_url": "https://docs.example.org/referral"
+     }
+    ]
+   },
+   "taker_fee_bps": null,
+   "checked_at": "2026-10-20"
+  },
+  "nansen": {
+   "category": "analytics",
+   "cp0x": [
+    {
+     "kind": "fee_discount",
+     "value": 15,
+     "unit": "%",
+     "applies_to": "subscription",
+     "quote": "fee_discount 15",
+     "source_url": "https://cp0x.com/deals/nansen"
+    }
+   ],
+   "original": {
+    "status": "none",
+    "items": [
+     {
+      "kind": "other",
+      "value": null,
+      "unit": null,
+      "applies_to": "referee gets nothing",
+      "quote": "other None",
+      "source_url": "https://docs.example.org/referral"
+     }
+    ]
+   },
+   "taker_fee_bps": null,
+   "checked_at": "2026-08-01"
+  },
+  "mellow": {
+   "category": "staking",
+   "cp0x": [
+    {
+     "kind": "loyalty",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x loyalty",
+     "quote": "cp0x loyalty",
+     "source_url": "https://cp0x.com/deals/mellow"
+    }
+   ],
+   "original": {
+    "status": "not_found",
+    "searched": [
+     "https://a.example.org/x",
+     "https://b.example.org/y"
+    ]
+   },
+   "taker_fee_bps": null,
+   "checked_at": "2026-10-20"
+  }
+ }
+}

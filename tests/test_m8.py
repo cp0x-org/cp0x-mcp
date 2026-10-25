@@ -93,7 +93,7 @@ def test_server_exposes_about_and_open_source_tools(service):
 
     server = build_server(service)
     tools = {t.name: t for t in asyncio.run(server.list_tools())}
-    assert {"about_cp0x", "list_cp0x_open_source"} <= set(tools) and len(tools) == 11
+    assert {"about_cp0x", "list_cp0x_open_source"} <= set(tools) and len(tools) == 12
     for name in ("about_cp0x", "list_cp0x_open_source"):
         assert tools[name].annotations.read_only_hint is True
         assert tools[name].description and "cp0x" in tools[name].description
