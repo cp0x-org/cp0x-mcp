@@ -16,7 +16,7 @@ def test_server_json_for_registry():
     assert data["name"] == "com.cp0x/public-data"
     assert data["title"]
     assert 1 <= len(data["description"]) <= 100
-    assert data["version"] == "0.1.0"
+    assert data["version"] == "0.2.0"
     assert data["repository"] == {"url": "https://github.com/cp0x-org/cp0x-mcp", "source": "github"}
     assert data["remotes"] == [{"type": "streamable-http", "url": "https://mcp.cp0x.com/mcp"}]
     assert "packages" not in data

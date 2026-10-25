@@ -28,7 +28,7 @@ def _package_version() -> str:
     try:
         return version("cp0x-mcp")
     except PackageNotFoundError:
-        return "0.1.0"
+        return "0.2.0"
 
 
 def get_json(url: str, *, transport: httpx.BaseTransport | None = None) -> Any:

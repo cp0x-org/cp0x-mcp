@@ -1,6 +1,6 @@
 [project]
 name = "cp0x-mcp"
-version = "0.1.0"
+version = "0.2.0"
 description = "MCP server exposing cp0x public data: referral deals and races, DeFi interface geo-restrictions monitor, x402 facilitators"
 requires-python = ">=3.10"
 license = "MIT"

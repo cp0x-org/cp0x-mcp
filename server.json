@@ -3,7 +3,7 @@
   "name": "com.cp0x/public-data",
   "title": "cp0x public data",
   "description": "Read-only cp0x data: referral deals and races, DeFi geo-restrictions, and x402 catalogs.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "url": "https://github.com/cp0x-org/cp0x-mcp",
     "source": "github"

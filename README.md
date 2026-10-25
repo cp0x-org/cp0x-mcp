@@ -129,7 +129,7 @@ Forward `/mcp` and `/health` to port 8000 and preserve the public `Host` header.
 
 ## Publish
 
-Keep `server.json` in the repository root. It declares `com.cp0x/public-data`, version `0.1.0`, and the public Streamable HTTP endpoint; publishing this remote server does not require a package.
+Keep `server.json` in the repository root. It declares `com.cp0x/public-data`, version `0.2.0`, and the public Streamable HTTP endpoint; publishing this remote server does not require a package.
 
 Before publishing to the MCP Registry, verify ownership of `cp0x.com` using a DNS TXT record at the domain apex or an HTTP proof at `https://cp0x.com/.well-known/mcp-registry-auth`. Authenticate with `mcp-publisher` using the corresponding domain verification method, then run from the repository root:
 
