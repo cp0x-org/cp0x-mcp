@@ -1,0 +1,45 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+
+          chmod 600 ~/.ssh/id_ed25519
+
+          ssh-keyscan -p ${{ secrets.SERVER_PORT }} \
+            ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy application
+        run: |
+          ssh -p ${{ secrets.SERVER_PORT }} \
+            ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+
+            set -euo pipefail
+
+            cd "${{ secrets.DEPLOY_PATH }}"
+
+            git pull
+
+            docker build -t cp0x-mcp .
+
+            docker rm -f cp0x-mcp || true
+
+            docker run -d \
+              --name cp0x-mcp \
+              --restart unless-stopped \
+              -p 127.0.0.1:8000:8000 \
+              cp0x-mcp
+
+          EOF
