@@ -339,10 +339,10 @@
    "cp0x": [
     {
      "kind": "fee_rebate",
-     "value": 20,
+     "value": 40,
      "unit": "%",
-     "applies_to": "VOOI fees paid (cp0x returns 20 of its 25% referral share)",
-     "quote": "cp0x returns 20% of the VOOI fees users pay (20 of its 25% referral share); cp0x owner statement, 2026-10-25",
+     "applies_to": "VOOI fees paid by users who joined with the cp0x code",
+     "quote": "Your referrals get 40% of the VOOI fees they pay; cp0x referrer dashboard on ultra.vooi.io, 2026-10-26",
      "source_url": "https://cp0x.com/deals/vooi"
     }
    ],
@@ -361,7 +361,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "barter": {
    "category": "dex",
