@@ -8,7 +8,7 @@ Each tool call carries the tool name and its arguments, for example a venue name
 
 ## What is stored
 
-The server process does not record tool calls or their arguments. It keeps only public upstream responses in an in-memory cache, which is lost on restart. The reverse proxy in front of the server writes standard access logs (IP address, time, path, status code) to cp0x's internal analytics database. cp0x uses them for rate limiting, abuse prevention and aggregate traffic counts. The logs are not deleted on a fixed schedule; to have log entries tied to your IP address removed, write to admin@cp0x.com.
+The server process keeps daily aggregate counts of tool calls per tool and per client application name (the name a client reports when it connects, for example `claude-ai`). It does not record IP addresses, arguments or individual calls. Counts for the last 30 days are kept in memory, lost on restart, and published at `https://mcp.cp0x.com/usage`. Apart from these counts, it keeps only public upstream responses in an in-memory cache, which is lost on restart. The reverse proxy in front of the server writes standard access logs (IP address, time, path, status code) to cp0x's internal analytics database. cp0x uses them for rate limiting, abuse prevention and aggregate traffic counts. The logs are not deleted on a fixed schedule; to have log entries tied to your IP address removed, write to admin@cp0x.com.
 
 ## Sharing
 

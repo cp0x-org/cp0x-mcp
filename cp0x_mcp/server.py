@@ -2,6 +2,7 @@
 
 import argparse
 import time
+from collections.abc import Mapping
 from importlib.metadata import PackageNotFoundError, version
 from typing import Annotated, Any, Callable, Iterable, Literal
 
@@ -22,6 +23,7 @@ from . import sources
 from .limits import RateLimiter
 from .service import Cp0xService
 from .upstream import Fetcher, UpstreamThrottled
+from .usage import UsageCounter
 
 
 def _package_version() -> str:
@@ -58,7 +60,7 @@ def _annotations(title: str) -> ToolAnnotations:
     )
 
 
-def build_server(service: Cp0xService) -> MCPServer:
+def build_server(service: Cp0xService, usage: UsageCounter | None = None) -> MCPServer:
     """Expose twelve read-only tools, including cp0x facts and open-source repositories."""
     server = MCPServer(
         "cp0x",
@@ -270,6 +272,25 @@ def build_server(service: Cp0xService) -> MCPServer:
     ) -> dict:
         return service.list_cp0x_open_source(kind=kind)
 
+    if usage is not None:
+        tool_names: set[str] | None = None
+
+        async def count_usage(ctx, call_next):
+            nonlocal tool_names
+            if ctx.method == "tools/call":
+                name = ctx.params.get("name") if isinstance(ctx.params, Mapping) else None
+                if not isinstance(name, str):
+                    return await call_next(ctx)
+                if tool_names is None:
+                    tool_names = {tool.name for tool in await server.list_tools()}
+                if name in tool_names:
+                    client_params = ctx.session.client_params
+                    client_info = client_params.client_info if client_params is not None else None
+                    usage.record(name, client_info.name if client_info is not None else None)
+            return await call_next(ctx)
+
+        server.middleware.append(count_usage)
+
     return server
 
 
@@ -306,6 +327,7 @@ def build_app(
     allowed_origins: Iterable[str] = (),
     per_ip_per_minute: int = 60,
     clock: Callable[[], float] = time.monotonic,
+    usage: UsageCounter | None = None,
 ) -> Starlette:
     """Build the SDK ASGI app with a health route and caller request limits."""
     package_version = _package_version()
@@ -313,6 +335,11 @@ def build_app(
     @server.custom_route("/health", ["GET"])
     async def health(request: Request) -> JSONResponse:
         return JSONResponse({"ok": True, "server": "cp0x", "version": package_version})
+
+    if usage is not None:
+        @server.custom_route("/usage", ["GET"])
+        async def usage_snapshot(request: Request) -> JSONResponse:
+            return JSONResponse(usage.snapshot())
 
     security = TransportSecuritySettings(
         allowed_hosts=list(allowed_hosts), allowed_origins=list(allowed_origins)
@@ -344,9 +371,10 @@ def parse_args(argv: list[str] | None) -> argparse.Namespace:
 def main(argv: list[str] | None = None) -> None:
     """Run the cp0x MCP server using the selected transport."""
     args = parse_args(argv)
+    usage = UsageCounter()
     server = build_server(Cp0xService(Fetcher(
         get_json, budget_per_minute=sources.UPSTREAM_BUDGET_PER_MINUTE,
-    )))
+    )), usage=usage)
     if args.transport == "stdio":
         server.run(transport="stdio")
     else:
@@ -360,6 +388,7 @@ def main(argv: list[str] | None = None) -> None:
                 allowed_hosts=args.allowed_host,
                 allowed_origins=args.allowed_origin,
                 per_ip_per_minute=args.per_ip_per_minute,
+                usage=usage,
             ),
             host=args.host,
             port=args.port,

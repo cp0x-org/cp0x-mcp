@@ -110,7 +110,7 @@ Run over HTTP:
 cp0x-mcp --transport http --host 127.0.0.1 --port 8000 --allowed-host localhost:8000 --allowed-host 127.0.0.1:8000
 ```
 
-The HTTP routes are `/mcp` and `/health`. Configure `--allowed-host` to match the client's `Host` header, including a port where needed. When no allowlist is supplied, localhost and 127.0.0.1 are allowed with or without ports.
+The HTTP routes are `/mcp`, `/health` and `/usage`. `/usage` returns daily aggregate tool-call counts per tool and client application name for the last 30 days, without IP addresses or arguments. Configure `--allowed-host` to match the client's `Host` header, including a port where needed. When no allowlist is supplied, localhost and 127.0.0.1 are allowed with or without ports.
 
 ## Deploy behind a reverse proxy
 
