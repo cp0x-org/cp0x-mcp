@@ -65,12 +65,10 @@ def build_server(service: Cp0xService, usage: UsageCounter | None = None) -> MCP
     server = MCPServer(
         "cp0x",
         instructions=(
-            "Twelve read-only tools for cp0x data: referral deals and races, "
-            "a comparison of the cp0x referral benefit with each venue's own offer, a monitor of DeFi "
-            "interface geo-restrictions, x402 facilitators and resources, "
-            "a static cp0x fact sheet with mission, values, sites, channels and 2025 figures, "
-            "and public open-source repositories from GitHub. "
-            "Referral links include a cp0x referral code."
+            "Twelve read-only tools for cp0x data: referral deals and races, a comparison of the cp0x referral benefit with "
+            "each venue's own offer, a monitor of DeFi interface geo-restrictions, a static cp0x fact sheet with mission, "
+            "values, sites, channels and 2025 figures, public open-source repositories from GitHub, and x402 catalogs: "
+            "facilitators and cp0x's test resources. Referral links include a cp0x referral code."
         ),
     )
 
@@ -219,30 +217,6 @@ def build_server(service: Cp0xService, usage: UsageCounter | None = None) -> MCP
         return service.list_restricted_interfaces(country=country)
 
     @server.tool(
-        title="List x402 facilitators",
-        annotations=_annotations("List x402 facilitators"),
-        description=(
-            "List x402 facilitators and their URLs from cp0x. "
-            "Use this when looking up facilitator names and endpoints in the cp0x catalog."
-        ),
-    )
-    def list_x402_facilitators() -> dict:
-        return service.list_x402_facilitators()
-
-    @server.tool(
-        title="List cp0x x402 resources",
-        annotations=_annotations("List cp0x x402 resources"),
-        description=(
-            "List cp0x x402 resources with prices and tags. "
-            "Use this when finding available cp0x x402 resources or filtering them by tag."
-        ),
-    )
-    def list_cp0x_x402_resources(
-        tag: Annotated[str | None, Field(description="Resource tag to filter by.")] = None,
-    ) -> dict:
-        return service.list_cp0x_x402_resources(tag=tag)
-
-    @server.tool(
         title="About cp0x",
         annotations=_annotations("About cp0x"),
         description=(
@@ -271,6 +245,30 @@ def build_server(service: Cp0xService, usage: UsageCounter | None = None) -> MCP
         ] = None,
     ) -> dict:
         return service.list_cp0x_open_source(kind=kind)
+
+    @server.tool(
+        title="List x402 facilitators",
+        annotations=_annotations("List x402 facilitators"),
+        description=(
+            "List x402 facilitators and their URLs from cp0x. "
+            "Use this when looking up facilitator names and endpoints in the cp0x catalog."
+        ),
+    )
+    def list_x402_facilitators() -> dict:
+        return service.list_x402_facilitators()
+
+    @server.tool(
+        title="List cp0x x402 resources",
+        annotations=_annotations("List cp0x x402 resources"),
+        description=(
+            "List cp0x's x402 test resources with their listed prices and tags; optionally filter by tag. "
+            "Use this when the user asks about x402 resources or pay-per-call APIs."
+        ),
+    )
+    def list_cp0x_x402_resources(
+        tag: Annotated[str | None, Field(description="Resource tag to filter by.")] = None,
+    ) -> dict:
+        return service.list_cp0x_x402_resources(tag=tag)
 
     if usage is not None:
         tool_names: set[str] | None = None
