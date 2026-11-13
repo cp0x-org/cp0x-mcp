@@ -67,6 +67,54 @@
     }
    ]
   },
+  "arcus": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "fee_discount",
+     "value": 5,
+     "unit": "%",
+     "applies_to": "positive_perp_trading_fees",
+     "quote": "Sign up for Arcus through the cp0x referral link to get the standard 5% discount on perpetual trading fees",
+     "source_url": "https://cp0x.com/deals/arcus"
+    },
+    {
+     "kind": "other",
+     "value": null,
+     "unit": null,
+     "applies_to": "perpetuals_access_through_an_automatically_assigned_invite_code",
+     "quote": "access to perpetuals trading through an automatically assigned invite code, subject to availability",
+     "source_url": "https://cp0x.com/deals/arcus"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "fee_discount",
+      "value": 5,
+      "unit": "%",
+      "applies_to": "positive_maker_and_taker_fees_under_any_referral_code",
+      "quote": "If your address is registered under a referral code, you get a 5% discount on positive maker and taker fees.",
+      "source_url": "https://docs.arcus.xyz/concepts/perpetuals/fees"
+     }
+    ]
+   },
+   "taker_fee_bps": 4.5,
+   "fees_source_url": "https://help.arcus.xyz/faq/arcus-perps-faq/fees/what-are-the-perp-fee-tiers",
+   "checked_at": "2026-11-13",
+   "fees_note": "Base-tier taker rate for crypto perpetuals; RWA perpetuals (equities, commodities, indices) start at 2.25 bps taker and 0 maker, and spot Stock Token trading carries no Arcus fee.",
+   "conditions": [
+    {
+     "text": "Zero fees and maker rebates are not affected.",
+     "source_url": "https://docs.arcus.xyz/concepts/perpetuals/fees"
+    },
+    {
+     "text": "No separate invite code is needed while automatic distribution is enabled and codes are available.",
+     "source_url": "https://cp0x.com/deals/arcus"
+    }
+   ]
+  },
   "risex": {
    "category": "perps",
    "cp0x": [

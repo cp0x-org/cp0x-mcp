@@ -166,7 +166,7 @@ def test_service_result_reports_retry_after(service, http):
     assert "error" in result and result["retry_after_s"] == 45
     service._fetcher._get_json = http
     healthy = service.list_deals()  # cp0x.com is a different host: not backing off
-    assert "error" not in healthy and healthy["count"] == 31
+    assert "error" not in healthy and healthy["count"] == 32
     again = service.list_x402_facilitators()  # x402-api.cp0x.com still backing off, no new call
     assert "error" in again and 1 <= again["retry_after_s"] <= 45
     assert http.calls.count("https://x402-api.cp0x.com/api/free/facilitators") == 1

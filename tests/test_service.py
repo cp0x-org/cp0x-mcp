@@ -33,7 +33,7 @@ def test_source_urls_are_pinned():
 def test_list_deals_returns_all_active_deals_with_compact_fields(service):
     result = service.list_deals()
     fixture = load("deals.json")["deals"]
-    assert result["count"] == len(fixture) == 31
+    assert result["count"] == len(fixture) == 32
     assert [d["slug"] for d in result["deals"]] == [d["slug"] for d in fixture]
     nansen = next(d for d in result["deals"] if d["slug"] == "nansen")
     source = next(d for d in fixture if d["slug"] == "nansen")
@@ -72,7 +72,7 @@ def test_list_deals_query_filters_by_title_or_slug_case_insensitive(service):
 def test_list_deals_limit(service):
     result = service.list_deals(limit=5)
     assert len(result["deals"]) == 5
-    assert result["count"] == 31  # count = total matching, independent of limit
+    assert result["count"] == 32  # count = total matching, independent of limit
 
 
 def test_get_deal_returns_full_api_object(service):
@@ -245,7 +245,7 @@ def test_stale_cache_is_flagged_in_tool_result(service, http, clock):
     http.fail.add(sources.DEALS_URL)
     stale = service.list_deals()
     assert stale["stale"] is True
-    assert stale["count"] == 31
+    assert stale["count"] == 32
 
 
 def test_upstream_down_without_cache_is_a_structured_error(service, http):
