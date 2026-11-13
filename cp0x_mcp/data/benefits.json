@@ -31,6 +31,42 @@
    "checked_at": "2026-10-25",
    "fees_note": "Promotional taker rate; the base rate is 5 bps."
   },
+  "qfex": {
+   "category": "perps",
+   "cp0x": [
+    {
+     "kind": "fee_rebate",
+     "value": 37,
+     "unit": "%",
+     "applies_to": "trading_fees_on_trades_without_a_qfex_builder_code",
+     "quote": "Sign up for QFEX through the cp0x link to get 37% of your trading fees back",
+     "source_url": "https://cp0x.com/deals/qfex"
+    }
+   ],
+   "original": {
+    "status": "found",
+    "items": [
+     {
+      "kind": "fee_rebate",
+      "value": 10,
+      "unit": "%",
+      "applies_to": "trading_fees_on_trades_without_a_qfex_builder_code_refunded_daily",
+      "quote": "The person you refer receives a 10% fee discount, processed as a refund at or around 00:10 UTC.",
+      "source_url": "https://docs.qfex.com/qfex/referral"
+     }
+    ]
+   },
+   "taker_fee_bps": 5,
+   "fees_source_url": "https://docs.qfex.com/qfex/fees",
+   "checked_at": "2026-11-12",
+   "fees_note": "Starting-tier taker rate for commodities and indices; single stocks start at 10 bps. The rebates and the savings example apply only to trades without a QFEX builder code.",
+   "conditions": [
+    {
+     "text": "Fees from a trade side attributed to a builder code generate no referral or affiliate commission at any level, no standard 10% trader rebate, and no additional affiliate-funded rebate.",
+     "source_url": "https://docs.qfex.com/qfex/referral"
+    }
+   ]
+  },
   "risex": {
    "category": "perps",
    "cp0x": [

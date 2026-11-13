@@ -3,7 +3,7 @@ from tests.conftest import load
 
 
 def test_fixture_counts():
-    assert len(load("deals.json")["deals"]) == 30
+    assert len(load("deals.json")["deals"]) == 31
     assert len(load("leaderboard_risex.json")["entries"]) == 155
     assert len(load("monitor_interfaces.json")["interfaces"]) == 8
     assert len(load("monitor_observations.json")["observations"]) == 7
