@@ -9,7 +9,7 @@
      "value": 5,
      "unit": "%",
      "applies_to": "trading_fees",
-     "quote": "Sign up through the cp0x referral link to get 5% off trading fees: app.ondoperps.xyz/?ref=JL59WM",
+     "quote": "Sign up for Ondo Perps with the cp0x code JL59WM to get 5% off your trading fees on perpetual futures for US stocks, indices and commodities.",
      "source_url": "https://cp0x.com/deals/ondo_perps"
     }
    ],
@@ -26,10 +26,10 @@
      }
     ]
    },
-   "taker_fee_bps": 2.5,
+   "taker_fee_bps": 5,
    "fees_source_url": "https://docs.ondoperps.xyz/fees",
-   "checked_at": "2026-10-25",
-   "fees_note": "Promotional taker rate; the base rate is 5 bps."
+   "checked_at": "2026-11-14",
+   "fees_note": "Base-tier perpetual futures taker rate before referral discounts."
   },
   "qfex": {
    "category": "perps",
@@ -122,16 +122,8 @@
      "kind": "points_boost",
      "value": 20,
      "unit": "%",
-     "applies_to": "points",
-     "quote": "20% point boost credited straight to your account",
-     "source_url": "https://cp0x.com/deals/risex"
-    },
-    {
-     "kind": "tier_upgrade",
-     "value": null,
-     "unit": null,
-     "applies_to": "tier_3_first_60_days_after_leaderboard_start_via_monthly_rebates",
-     "quote": "Tier 3 fee discount for the first 60 days after the leaderboard starts (via monthly rebates)",
+     "applies_to": "points_credited_directly",
+     "quote": "Sign up for RISEx through the cp0x link rise.trade/invite/cp0xbest to get a 20% boost on the points you earn, credited straight to your account.",
      "source_url": "https://cp0x.com/deals/risex"
     }
    ],
@@ -143,14 +135,14 @@
       "value": null,
       "unit": null,
       "applies_to": "standard_referral_no_stated_invitee_bonus",
-      "quote": "A standard referral link earns you the 10% points share.",
+      "quote": "Referral points share: 10% of the points your referrals earn, added to your balance in the weekly points distribution.",
       "source_url": "https://docs.risechain.com/docs/risex/rewards/Referrals-Affiliates-Program"
      }
     ]
    },
    "taker_fee_bps": 3,
    "fees_source_url": "https://docs.risechain.com/docs/risex/trading/fees",
-   "checked_at": "2026-10-25",
+   "checked_at": "2026-11-14",
    "fees_note": "Lowest-tier perpetual taker rate."
   },
   "extended": {
@@ -160,8 +152,8 @@
      "kind": "points_boost",
      "value": 20,
      "unit": "%",
-     "applies_to": "points (15% credited directly, 5% via the cp0x leaderboard)",
-     "quote": "cp0x bonuses: 20% bonus to points 15% credited directly to the account 5% distributed via the cp0x leaderboard",
+     "applies_to": "points_15_percent_direct_5_percent_leaderboard",
+     "quote": "Sign up for Extended with the cp0x code CP0X to get 20% more points, with 15% credited straight to your account and 5% paid through the cp0x leaderboard, which now has a pool of 255,000 points.",
      "source_url": "https://cp0x.com/deals/extended"
     }
    ],
@@ -172,16 +164,22 @@
       "kind": "fee_discount",
       "value": 10,
       "unit": "%",
-      "applies_to": "commissions_first_50M_USD_total_trading_volume",
-      "quote": "Invited users receive a 10% discount on commissions for their first $50M in total trading volume.",
+      "applies_to": "trading_fees_from_TGE_first_25M_USD_volume_or_30_days_from_signup",
+      "quote": "From TGE, invited users receive a 10% discount on trading fees for their first $25M in trading volume or 30 days from signup, whichever comes first.",
       "source_url": "https://docs.extended.exchange/extended-resources/referrals-and-affiliates"
      }
     ]
    },
    "taker_fee_bps": 2.5,
    "fees_source_url": "https://docs.extended.exchange/extended-resources/trading/trading-fees-and-rebates",
-   "checked_at": "2026-10-25",
-   "fees_note": "Regular perpetual and spot taker rate."
+   "checked_at": "2026-11-14",
+   "fees_note": "Regular perpetual and spot taker rate.",
+   "conditions": [
+    {
+     "text": "If you joined through a referral link before TGE and your total trading volume is below $25M at TGE, your discount restarts at TGE: a fresh 30 days, with your volume toward the $25M counted from zero.",
+     "source_url": "https://docs.extended.exchange/extended-resources/referrals-and-affiliates"
+    }
+   ]
   },
   "variational_omni": {
    "category": "perps",
@@ -228,16 +226,16 @@
      "kind": "fee_rebate",
      "value": 20,
      "unit": "%",
-     "applies_to": "paid_market_fees_rebated_every_10_days",
-     "quote": "Get 20% market fee rebates every 10 days",
+     "applies_to": "Preddy_fees_rebated_every_10_days",
+     "quote": "Signing up through the cp0x link returns 20% of the fees you pay to Preddy every 10 days.",
      "source_url": "https://cp0x.com/deals/preddy"
     },
     {
      "kind": "token_bonus",
      "value": null,
      "unit": "tokens",
-     "applies_to": "share_of_Polymarket_builder_drop",
-     "quote": "share of Polymarket builder drop",
+     "applies_to": "share_of_the_50_percent_of_Preddy_builder_drop_promised_to_all_Preddy_users",
+     "quote": "The team has said it will give 50% of its Polymarket builder drop to Preddy users, and any drop Polymarket itself makes goes straight to the users' wallets.",
      "source_url": "https://cp0x.com/deals/preddy"
     }
    ],
@@ -251,7 +249,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   },
   "polymarket_perps": {
    "category": "prediction",
@@ -290,8 +288,8 @@
      "kind": "fee_discount",
      "value": 4,
      "unit": "%",
-     "applies_to": "trading_fees",
-     "quote": "4%+ fee discount (leaderboard ended)",
+     "applies_to": "trading_fees_first_25M_USD_volume",
+     "quote": "The code CP0X gives 4% off your fees for your first $25 million in volume.",
      "source_url": "https://cp0x.com/deals/hyperliquid"
     }
    ],
@@ -310,8 +308,14 @@
    },
    "taker_fee_bps": 4.5,
    "fees_source_url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees",
-   "checked_at": "2026-10-25",
-   "fees_note": "Base-tier perpetual taker rate before referral or staking discounts."
+   "checked_at": "2026-11-14",
+   "fees_note": "Base-tier perpetual taker rate before referral or staking discounts.",
+   "conditions": [
+    {
+     "text": "The discount doesn't apply to vaults and sub-accounts.",
+     "source_url": "https://cp0x.com/deals/hyperliquid"
+    }
+   ]
   },
   "lighter": {
    "category": "perps",
@@ -320,8 +324,8 @@
      "kind": "points_boost",
      "value": 10,
      "unit": "%",
-     "applies_to": "points",
-     "quote": "10% points",
+     "applies_to": "weekly_points_on_Robinhood_Chain",
+     "quote": "Signing up with the cp0x code CP0XCOOL gives you a 10% boost on your weekly points on Lighter on Robinhood Chain.",
      "source_url": "https://cp0x.com/deals/lighter"
     }
    ],
@@ -335,20 +339,12 @@
       "applies_to": "paid_trading_fees_rebated_each_monday",
       "quote": "a 10% discount on fees you pay, rebated every Monday.",
       "source_url": "https://docs.lighter.xyz/programs/referral-program"
-     },
-     {
-      "kind": "fee_rebate",
-      "value": null,
-      "unit": "%",
-      "applies_to": "first_week_premium_or_advanced_fees",
-      "quote": "Referred users get their first week of Premium/Advanced fees rebated.",
-      "source_url": "https://docs.lighter.xyz/programs/referral-program"
      }
     ]
    },
    "taker_fee_bps": 0,
    "fees_source_url": "https://docs.lighter.xyz/trading/trading-fees",
-   "checked_at": "2026-10-25",
+   "checked_at": "2026-11-14",
    "fees_note": "Standard account, regular perpetual and spot orders; other account types differ."
   },
   "backpack": {
@@ -358,8 +354,8 @@
      "kind": "fee_rebate",
      "value": 20,
      "unit": "%",
-     "applies_to": "trading_fees",
-     "quote": "receive a 20% fee rebate.",
+     "applies_to": "trading_fees_weekly_automatic_rebate_excluding_stock_perpetuals",
+     "quote": "Signing up through the cp0x link gives you 20% of your trading fees back, credited automatically every week (stock perpetuals excluded for now)",
      "source_url": "https://cp0x.com/deals/backpack"
     }
    ],
@@ -378,7 +374,7 @@
    },
    "taker_fee_bps": 5,
    "fees_source_url": "https://support.backpack.exchange/exchange/trading/trading-fees",
-   "checked_at": "2026-10-25",
+   "checked_at": "2026-11-14",
    "fees_note": "Lowest-tier perpetual futures taker rate; the spot taker rate is 10 bps."
   },
   "nansen": {
@@ -386,10 +382,18 @@
    "cp0x": [
     {
      "kind": "fee_discount",
-     "value": 15,
+     "value": 10,
      "unit": "%",
-     "applies_to": "Pioneer_or_Pro_subscription_1M_6M_1Y",
-     "quote": "Using our link, you’ll get a 15% discount on a 1M / 6M / 1Y subscription to the Pioneer or Pro plan.",
+     "applies_to": "Nansen_Pro_subscription_and_API_credits",
+     "quote": "Creating an account through the cp0x link gives you 10% off a Nansen Pro subscription, 10% off trading fees on every trade in Nansen, 10% off API credits.",
+     "source_url": "https://cp0x.com/deals/nansen"
+    },
+    {
+     "kind": "other",
+     "value": 10,
+     "unit": "%",
+     "applies_to": "trading_fees_on_every_trade_in_Nansen",
+     "quote": "Creating an account through the cp0x link gives you 10% off a Nansen Pro subscription, 10% off trading fees on every trade in Nansen, 10% off API credits.",
      "source_url": "https://cp0x.com/deals/nansen"
     }
    ],
@@ -416,7 +420,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   },
   "vooi": {
    "category": "perps",
@@ -425,8 +429,8 @@
      "kind": "fee_rebate",
      "value": 40,
      "unit": "%",
-     "applies_to": "VOOI fees paid by users who joined with the cp0x code",
-     "quote": "Your referrals get 40% of the VOOI fees they pay; cp0x referrer dashboard on ultra.vooi.io, 2026-10-26",
+     "applies_to": "VOOI_fees_rebated_to_wallet",
+     "quote": "Signing up with the code cp0xcool gives you 40% of your VOOI fees back, paid to your wallet",
      "source_url": "https://cp0x.com/deals/vooi"
     }
    ],
@@ -445,7 +449,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-26"
+   "checked_at": "2026-11-14"
   },
   "barter": {
    "category": "dex",
@@ -917,50 +921,44 @@
     "items": [
      {
       "kind": "other",
-      "value": 10,
+      "value": 50,
       "unit": "USD",
-      "applies_to": "deposit_at_least_100_USD_within_7_days_of_signup",
-      "quote": "a 10 USDT bonus for both parties.",
-      "source_url": "https://www.bybit.com/en/learn/bybit-guide/what-is-bybit-referral-program"
-     },
-     {
-      "kind": "other",
-      "value": 7,
-      "unit": "USD",
-      "applies_to": "additional_fiat_deposit_at_least_100_USD_within_7_days_of_signup",
-      "quote": "an additional 7 USDT is credited to both of you.",
-      "source_url": "https://www.bybit.com/en/learn/bybit-guide/what-is-bybit-referral-program"
-     },
-     {
-      "kind": "other",
-      "value": 15,
-      "unit": "USD",
-      "applies_to": "qualifying_deposit_100_USD_within_7_days_and_trade_500_USD_within_30_days",
-      "quote": "both the referrer and referee will receive a 15 USDT bonus.",
+      "applies_to": "signup_from_2026_10_10_1200_UTC_first_trade_50_USDT_within_14_days",
+      "quote": "First Trade Task: When your referee completes their first trade of at least $50 within 14 days of registration, you will each receive a 50 USDT reward.",
       "source_url": "https://www.bybit.com/en/help-center/article/Bybit-Referral-Program-General-FAQ"
      },
      {
       "kind": "other",
-      "value": 1000,
+      "value": 100,
       "unit": "USD",
-      "applies_to": "mystery_box_up_to_1000_USDT_qualifying_deposit_and_trade_10000_USD_within_30_days",
-      "quote": "a Mystery Box worth up to 1,000 USDT.",
+      "applies_to": "signup_from_2026_10_10_1200_UTC_trade_500_USDT_within_30_days_after_first_trade",
+      "quote": "More Trade Task: When your referee reaches at least $500 in cumulative trading volume within 30 days after their First Time Trade, you will each receive a 100 USDT reward.",
       "source_url": "https://www.bybit.com/en/help-center/article/Bybit-Referral-Program-General-FAQ"
      },
      {
       "kind": "other",
-      "value": 3,
+      "value": 100,
       "unit": "USD",
-      "applies_to": "stake_at_least_100_USD_in_flexible_or_fixed_savings_within_7_days_of_signup",
-      "quote": "3 USDT in rewards.",
+      "applies_to": "signup_from_2026_10_10_1200_UTC_trade_10000_USDT_within_30_days_after_first_trade",
+      "quote": "Advanced Trade Task: When your referee reaches at least $10,000 in cumulative trading volume within 30 days after their First Time Trade, you will each receive a 100 USDT reward.",
       "source_url": "https://www.bybit.com/en/help-center/article/Bybit-Referral-Program-General-FAQ"
      }
     ]
    },
    "taker_fee_bps": 5.5,
    "fees_source_url": "https://www.bybit.com/en/help-center/article/Trading-Fee-Structure",
-   "checked_at": "2026-10-25",
-   "fees_note": "VIP 0 perpetual and futures taker rate; spot is 10 bps and rates can vary by region."
+   "checked_at": "2026-11-14",
+   "fees_note": "VIP 0 perpetual and futures taker rate; spot is 10 bps and rates can vary by region.",
+   "conditions": [
+    {
+     "text": "For a referee registered on or after October 10, 2026, 12:00 PM UTC:",
+     "source_url": "https://www.bybit.com/en/help-center/article/Bybit-Referral-Program-General-FAQ"
+    },
+    {
+     "text": "Zero-fee trading pairs for Spot, Derivatives, and Options are excluded.",
+     "source_url": "https://www.bybit.com/en/help-center/article/Bybit-Referral-Program-General-FAQ"
+    }
+   ]
   },
   "utorg": {
    "category": "payments",
