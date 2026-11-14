@@ -28,6 +28,10 @@
    },
    "taker_fee_bps": 5,
    "fees_source_url": "https://docs.ondoperps.xyz/fees",
+   "fees_quote": [
+    "| Tier | Minimum 14-day volume | Perps Maker / Taker | Spot Maker / Taker |",
+    "| Base | \\$0 | 0.02% / 0.05% | 0.02% / 0.06% |"
+   ],
    "checked_at": "2026-11-14",
    "fees_note": "Base-tier perpetual futures taker rate before referral discounts."
   },
@@ -58,7 +62,11 @@
    },
    "taker_fee_bps": 5,
    "fees_source_url": "https://docs.qfex.com/qfex/fees",
-   "checked_at": "2026-11-12",
+   "fees_quote": [
+    "| Taker fees (%) / Tier | Effective Volume (volume traded on the platform in last 30 days) | Commodities | Indices | Single stocks |",
+    "| Tier 5 | \\<2m\\$ | 0.05% | 0.05% | 0.10% |"
+   ],
+   "checked_at": "2026-11-14",
    "fees_note": "Starting-tier taker rate for commodities and indices; single stocks start at 10 bps. The rebates and the savings example apply only to trades without a QFEX builder code.",
    "conditions": [
     {
@@ -102,7 +110,11 @@
    },
    "taker_fee_bps": 4.5,
    "fees_source_url": "https://help.arcus.xyz/faq/arcus-perps-faq/fees/what-are-the-perp-fee-tiers",
-   "checked_at": "2026-11-13",
+   "fees_quote": [
+    "| Tier | 30D volume ≥ | Maker | Taker |",
+    "| 0 | \\$0 | 0.015% | 0.045% |"
+   ],
+   "checked_at": "2026-11-14",
    "fees_note": "Base-tier taker rate for crypto perpetuals; RWA perpetuals (equities, commodities, indices) start at 2.25 bps taker and 0 maker, and spot Stock Token trading carries no Arcus fee.",
    "conditions": [
     {
@@ -142,17 +154,27 @@
    },
    "taker_fee_bps": 3,
    "fees_source_url": "https://docs.risechain.com/docs/risex/trading/fees",
+   "fees_quote": [
+    " | Tier |  | 14d Volume Threshold |  | Taker Fee (bps) |  | Maker Fee (bps) | ",
+    " | Tier 1 |  | $0 |  | 3.00 |  | 1.00 | "
+   ],
    "checked_at": "2026-11-14",
-   "fees_note": "Lowest-tier perpetual taker rate."
+   "fees_note": "Lowest-tier perpetual taker rate.",
+   "conditions": [
+    {
+     "text": "The referral is fixed when you accept the invite and can't be switched later, so use the cp0x link with the wallet you plan to trade from.",
+     "source_url": "https://cp0x.com/deals/risex"
+    }
+   ]
   },
   "extended": {
    "category": "perps",
    "cp0x": [
     {
      "kind": "points_boost",
-     "value": 20,
+     "value": 15,
      "unit": "%",
-     "applies_to": "points_15_percent_direct_5_percent_leaderboard",
+     "applies_to": "points_credited_directly_cp0x_leaderboard_part_ended_2026_11_09",
      "quote": "Sign up for Extended with the cp0x code CP0X to get 20% more points, with 15% credited straight to your account and 5% paid through the cp0x leaderboard, which now has a pool of 255,000 points.",
      "source_url": "https://cp0x.com/deals/extended"
     }
@@ -172,6 +194,10 @@
    },
    "taker_fee_bps": 2.5,
    "fees_source_url": "https://docs.extended.exchange/extended-resources/trading/trading-fees-and-rebates",
+   "fees_quote": [
+    "Currently, Extended features a flat fee structure for both perpetuals and spot markets:",
+    "* Taker: 0.025%"
+   ],
    "checked_at": "2026-11-14",
    "fees_note": "Regular perpetual and spot taker rate.",
    "conditions": [
@@ -199,6 +225,22 @@
      "applies_to": "silver_tier_first_90_days",
      "quote": "Silver tier for 90 days, which normally needs $5 million in monthly volume and adds a further 1% points boost",
      "source_url": "https://cp0x.com/deals/variational_omni"
+    },
+    {
+     "kind": "token_bonus",
+     "value": null,
+     "unit": "tokens",
+     "applies_to": "share_of_cp0x_affiliate_tokens",
+     "quote": "On top of that, cp0x shares part of the tokens it receives as an affiliate with users who joined through its link, and only they can take part in cp0x trading races on Variational.",
+     "source_url": "https://cp0x.com/deals/variational_omni"
+    },
+    {
+     "kind": "other",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x_trading_race_access",
+     "quote": "access to cp0x trading races.",
+     "source_url": "https://cp0x.com/deals/variational_omni"
     }
    ],
    "original": {
@@ -216,7 +258,11 @@
    },
    "taker_fee_bps": 0,
    "fees_source_url": "https://docs.variational.io/omni/trading/fees",
-   "checked_at": "2026-10-25",
+   "fees_quote": [
+    "## Trading Fees",
+    "There are no trading fees on Omni."
+   ],
+   "checked_at": "2026-11-14",
    "fees_note": "No trading fees on Omni; spreads and other costs are separate."
   },
   "preddy": {
@@ -278,7 +324,11 @@
    },
    "taker_fee_bps": 4,
    "fees_source_url": "https://docs.polymarket.com/perps/learn-about-trading/fees",
-   "checked_at": "2026-10-25",
+   "fees_quote": [
+    "| 30-Day Volume ≥ | Taker | Maker |",
+    "| \\$0 | 0.0400% | 0.0125% |"
+   ],
+   "checked_at": "2026-11-14",
    "fees_note": "Entry-tier taker rate for new accounts; builder fees are separate."
   },
   "hyperliquid": {
@@ -308,6 +358,10 @@
    },
    "taker_fee_bps": 4.5,
    "fees_source_url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees",
+   "fees_quote": [
+    "| Tier | 14d weighted volume ($) | Taker     | Maker  | Taker   | Maker   | Taker    | Maker   | Taker   | Maker   | Taker   | Maker   | Taker   | Maker   | Taker   | Maker   |",
+    "| 0    |                         | 0.045%    | 0.015% | 0.0270% | 0.0090% | 0.0315%  | 0.0105% | 0.0360% | 0.0120% | 0.0383% | 0.0128% | 0.0405% | 0.0135% | 0.0428% | 0.0143% |"
+   ],
    "checked_at": "2026-11-14",
    "fees_note": "Base-tier perpetual taker rate before referral or staking discounts.",
    "conditions": [
@@ -344,8 +398,18 @@
    },
    "taker_fee_bps": 0,
    "fees_source_url": "https://docs.lighter.xyz/trading/trading-fees",
+   "fees_quote": [
+    "#### Standard Account (Default)",
+    "* Fees: 0 maker / 0 taker on regular perpetual and spot orders; 1 bp on TWAP/advanced orders and RFQ"
+   ],
    "checked_at": "2026-11-14",
-   "fees_note": "Standard account, regular perpetual and spot orders; other account types differ."
+   "fees_note": "Standard account, regular perpetual and spot orders; other account types differ.",
+   "conditions": [
+    {
+     "text": "Lighter only accepts a referral code at sign-up and doesn't let you add it later, so open the cp0x link before you create your account.",
+     "source_url": "https://cp0x.com/deals/lighter"
+    }
+   ]
   },
   "backpack": {
    "category": "exchange",
@@ -356,6 +420,14 @@
      "unit": "%",
      "applies_to": "trading_fees_weekly_automatic_rebate_excluding_stock_perpetuals",
      "quote": "Signing up through the cp0x link gives you 20% of your trading fees back, credited automatically every week (stock perpetuals excluded for now)",
+     "source_url": "https://cp0x.com/deals/backpack"
+    },
+    {
+     "kind": "other",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x_trading_races_when_running",
+     "quote": "Users who joined through cp0x can also take part in cp0x trading races when they run.",
      "source_url": "https://cp0x.com/deals/backpack"
     }
    ],
@@ -374,6 +446,10 @@
    },
    "taker_fee_bps": 5,
    "fees_source_url": "https://support.backpack.exchange/exchange/trading/trading-fees",
+   "fees_quote": [
+    "|  Tier  | Staked BP | Assets Held | Spot Volume (30d) | Futures Volume (30d) | Spot Maker | Spot Taker | Futures Maker | Futures Taker |",
+    "| Tier 1 |     0     |      —      |         $0        |          $0          |    0.08%   |    0.10%   |     0.02%     |     0.05%     |"
+   ],
    "checked_at": "2026-11-14",
    "fees_note": "Lowest-tier perpetual futures taker rate; the spot taker rate is 10 bps."
   },
@@ -432,6 +508,14 @@
      "applies_to": "VOOI_fees_rebated_to_wallet",
      "quote": "Signing up with the code cp0xcool gives you 40% of your VOOI fees back, paid to your wallet",
      "source_url": "https://cp0x.com/deals/vooi"
+    },
+    {
+     "kind": "other",
+     "value": null,
+     "unit": null,
+     "applies_to": "cp0x_referral_bonuses_on_Extended_and_Lighter_Robinhood_Chain_through_VOOI",
+     "quote": "cp0x referral bonuses on Extended and Lighter on Robinhood Chain when you trade there through VOOI.",
+     "source_url": "https://cp0x.com/deals/vooi"
     }
    ],
    "original": {
@@ -450,61 +534,6 @@
    "taker_fee_bps": null,
    "fees_source_url": null,
    "checked_at": "2026-11-14"
-  },
-  "barter": {
-   "category": "dex",
-   "cp0x": [
-    {
-     "kind": "points_boost",
-     "value": 8,
-     "unit": "%",
-     "applies_to": "own_points_returned",
-     "quote": "Use our code when signing up - and get +8% of your points back.",
-     "source_url": "https://cp0x.com/deals/barter"
-    }
-   ],
-   "original": {
-    "status": "not_found",
-    "searched": [
-     "https://app.barterswap.xyz/points",
-     "https://barterswap.xyz/",
-     "https://barterdefi.gitbook.io/barter-docs",
-     "https://barterdefi-1.gitbook.io/barter"
-    ]
-   },
-   "taker_fee_bps": null,
-   "fees_source_url": null,
-   "checked_at": "2026-10-25"
-  },
-  "ostium": {
-   "category": "perps",
-   "cp0x": [
-    {
-     "kind": "points_boost",
-     "value": 16,
-     "unit": "%",
-     "applies_to": "points_automatic_referral_boost",
-     "quote": "Instant Bonus: +16% point boost when signing up through our link — automatically applied and visible in the interface.",
-     "source_url": "https://cp0x.com/deals/ostium"
-    }
-   ],
-   "original": {
-    "status": "found",
-    "items": [
-     {
-      "kind": "points_boost",
-      "value": 12,
-      "unit": "%",
-      "applies_to": "trading_scores_referrer_tier_5_referred_volume_at_least_100000000_USD",
-      "quote": "5 $100,000,000 12%",
-      "source_url": "https://ostium-labs.gitbook.io/ostium-docs/referrals"
-     }
-    ]
-   },
-   "taker_fee_bps": 10,
-   "fees_source_url": "https://docs.ostium.com/traders/reference/markets",
-   "checked_at": "2026-10-25",
-   "fees_note": "Opening fee for crypto perpetuals; other asset classes differ."
   },
   "tramplin": {
    "category": "staking",
@@ -533,7 +562,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   },
   "paradex": {
    "category": "perps",
@@ -570,7 +599,12 @@
    },
    "taker_fee_bps": 0,
    "fees_source_url": "https://docs.paradex.trade/trading/trading-fees",
-   "checked_at": "2026-10-25",
+   "fees_quote": [
+    "* Retail Takers and Makers have 0% fees on all products: Perps, Spot and Options",
+    "| Maker Fee | Taker Fee |",
+    "| 0%        | 0%        |"
+   ],
+   "checked_at": "2026-11-14",
    "fees_note": "Retail rate on all products."
   },
   "curvance": {
@@ -604,7 +638,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25",
+   "checked_at": "2026-11-14",
    "conditions": [
     {
      "text": "The current reward structure is active until December 17 .",
@@ -659,7 +693,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25",
+   "checked_at": "2026-11-14",
    "conditions": [
     {
      "text": "Important: to participate you must fill out the application form before March 18, 2026, 23:59 UTC",
@@ -688,7 +722,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   },
   "ethena": {
    "category": "staking",
@@ -707,7 +741,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   },
   "infinex": {
    "category": "wallet",
@@ -726,7 +760,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   },
   "fluence": {
    "category": "depin",
@@ -760,7 +794,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   },
   "symbiotic": {
    "category": "staking",
@@ -779,54 +813,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
-  },
-  "gearbox": {
-   "category": "lending",
-   "cp0x": [
-    {
-     "kind": "other",
-     "value": 2.33,
-     "unit": "%",
-     "applies_to": "additional_wstETH_incentive_APY_until_October_18_2025",
-     "quote": "wstETH Incentive: additional boost until October 18, 2025 2.33%",
-     "source_url": "https://cp0x.com/deals/gearbox"
-    },
-    {
-     "kind": "points_boost",
-     "value": 19,
-     "unit": "x",
-     "applies_to": "Mellow_points_in_looping_strategy",
-     "quote": "Bonuses: Mellow Points ~19x and Symbiotic Points ~9.5x.",
-     "source_url": "https://cp0x.com/deals/gearbox"
-    },
-    {
-     "kind": "other",
-     "value": 9.5,
-     "unit": "x",
-     "applies_to": "Symbiotic_points_in_looping_strategy",
-     "quote": "Bonuses: Mellow Points ~19x and Symbiotic Points ~9.5x.",
-     "source_url": "https://cp0x.com/deals/gearbox"
-    }
-   ],
-   "original": {
-    "status": "not_found",
-    "searched": [
-     "https://gearbox.fi/",
-     "https://docs.gearbox.fi/",
-     "https://blog.gearbox.finance/",
-     "https://app.gearbox.fi/pools/1/0x72ccb97cbdc40f8fb7ffa42ed93ae74923547200"
-    ]
-   },
-   "taker_fee_bps": null,
-   "fees_source_url": null,
-   "checked_at": "2026-10-25",
-   "conditions": [
-    {
-     "text": "In this strategy, cp0x retains 50% of the points as compensation for providing incentives to the pool.",
-     "source_url": "https://cp0x.com/deals/gearbox"
-    }
-   ]
+   "checked_at": "2026-11-14"
   },
   "graph": {
    "category": "staking",
@@ -845,7 +832,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   },
   "lido": {
    "category": "staking",
@@ -864,7 +851,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   },
   "tally_arb": {
    "category": "governance",
@@ -883,7 +870,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   },
   "tally_op": {
    "category": "governance",
@@ -902,7 +889,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   },
   "bybit": {
    "category": "exchange",
@@ -947,6 +934,11 @@
    },
    "taker_fee_bps": 5.5,
    "fees_source_url": "https://www.bybit.com/en/help-center/article/Trading-Fee-Structure",
+   "fees_quote": [
+    " |  VIP Level  |  |  Spot Trading*  (Crypto-Crypto)  |  |  Perpetual & Futures Contracts Trading  |  |  Options Trading  | ",
+    " |  Taker Fee Rate  |  |  Maker Fee Rate  |  |  Taker Fee Rate  |  |  Maker Fee Rate  |  |  Taker Fee Rate  |  |  Maker Fee Rate  | ",
+    " |  VIP 0  |  |  0.1000%  |  |  0.1000%  |  |  0.0550%  |  |  0.0200%  |  |  0.0300%  |  |  0.0200%  | "
+   ],
    "checked_at": "2026-11-14",
    "fees_note": "VIP 0 perpetual and futures taker rate; spot is 10 bps and rates can vary by region.",
    "conditions": [
@@ -977,7 +969,7 @@
    },
    "taker_fee_bps": null,
    "fees_source_url": null,
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-11-14"
   }
  }
 }

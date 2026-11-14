@@ -28,7 +28,7 @@ def _number(value) -> bool:
 
 def _without_quotes(value):
     if isinstance(value, dict):
-        return {key: _without_quotes(item) for key, item in value.items() if key != "quote"}
+        return {key: _without_quotes(item) for key, item in value.items() if key not in {"quote", "fees_quote"}}
     if isinstance(value, list):
         return [_without_quotes(item) for item in value]
     return value

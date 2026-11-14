@@ -223,3 +223,13 @@ def test_server_instructions_count_twelve_tools(service):
 def test_readme_lists_the_comparison_tool():
     assert "`compare_referral_benefits`" in (ROOT / "README.md").read_text(encoding="utf-8")
 
+
+
+def test_fee_evidence_stays_in_the_data_file_not_in_responses(http, clock):
+    import copy
+
+    data = copy.deepcopy(load("benefits.json"))
+    data["venues"]["ondo_perps"]["fees_quote"] = ["| Tier | Maker | Taker |", "| 1 | 0.01% | 0.0412% |"]
+    svc = _service(http, clock, benefits=data)
+    text = json.dumps(svc.compare_referral_benefits()) + json.dumps(svc.get_deal("ondo_perps"))
+    assert '"fees_quote"' not in text and "0.0412%" not in text
