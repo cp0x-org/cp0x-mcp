@@ -24,5 +24,11 @@ jobs:
       - name: Deploy application
         run: |
           ssh -p ${{ secrets.SERVER_PORT }} \
-            ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} \
-            "sudo /usr/local/bin/deploy-cp0x-mcp"
+            ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+            set -euo pipefail
+
+            cd /opt/projects/cp0x-mcp
+            git pull
+
+            sudo /usr/local/bin/deploy-cp0x-mcp
+          EOF
